@@ -2,14 +2,14 @@ package com.github.mbw.commons.kit.io;
 
 import com.github.mbw.commons.throwable.ServiceException;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.compress.archivers.zip.ZipFile;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.tools.zip.ZipEntry;
+import org.apache.tools.zip.ZipFile;
+import org.apache.tools.zip.ZipOutputStream;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Enumeration;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
 
 /**
  * 解压压缩工具包

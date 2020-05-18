@@ -1,7 +1,7 @@
 package com.github.mbw.commons.kit.valid;
 
-import cn.mbw.oc.common.helper.JwtHelper;
 import com.alibaba.fastjson.JSONObject;
+import com.github.mbw.commons.helper.JwtHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.servlet.HandlerInterceptor;

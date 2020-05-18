@@ -121,6 +121,11 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
+        <!--alibaba.fastjson-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
         <!--shiro-->
         <dependency>
             <groupId>org.apache.shiro</groupId>
@@ -198,6 +203,62 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <!--gson-->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+        <!--apache.httpclient-->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <!--quartz-->
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+        </dependency>
+        <!--baidu.validator-->
+        <dependency>
+            <groupId>com.baidu.unbiz</groupId>
+            <artifactId>fluent-validator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.baidu.unbiz</groupId>
+            <artifactId>fluent-validator-jsr303</artifactId>
+        </dependency>
+        <!--servlet-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!--apache.poi-->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-excelant</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml-schemas</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-scratchpad</artifactId>
+        </dependency>
+        <!--dagger-->
+        <dependency>
+            <groupId>com.google.dagger</groupId>
+            <artifactId>dagger</artifactId>
         </dependency>
         <!--zookeeper-->
         <dependency>
@@ -350,6 +411,12 @@
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.version}</version>
             </dependency>
+            <!--alibaba.fastjson-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${alibaba.fastjson.version}</version>
+            </dependency>
             <!--redis-->
             <dependency>
                 <groupId>redis.clients</groupId>
@@ -379,6 +446,12 @@
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo-spring-boot-starter</artifactId>
                 <version>${apache.dubbo.version}</version>
+            </dependency>
+            <!--apache.httpclient-->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${apache.httpclient.version}</version>
             </dependency>
             <!--curator 连接zookeeper，操作zookeeper client -->
             <dependency>
@@ -424,6 +497,39 @@
                 <groupId>cn.afterturn</groupId>
                 <artifactId>easypoi-annotation</artifactId>
                 <version>${easypoi.version}</version>
+            </dependency>
+            <!--servlet-->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${servlet.api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!--apache.poi-->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${apache.poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-excelant</artifactId>
+                <version>${apache.poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${apache.poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml-schemas</artifactId>
+                <version>${apache.poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-scratchpad</artifactId>
+                <version>${apache.poi.version}</version>
             </dependency>
             <!--thymeleaf-->
             <dependency>
@@ -530,6 +636,47 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson.version}</version>
+            </dependency>
+            <!--gson-->
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
+            </dependency>
+            <!--quartz-->
+            <dependency>
+                <groupId>org.quartz-scheduler</groupId>
+                <artifactId>quartz</artifactId>
+                <version>${quartz.version}</version>
+            </dependency>
+            <!--baidu.validator-->
+            <dependency>
+                <groupId>com.baidu.unbiz</groupId>
+                <artifactId>fluent-validator</artifactId>
+                <version>${baidu.validator.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.baidu.unbiz</groupId>
+                <artifactId>fluent-validator-jsr303</artifactId>
+                <version>${baidu.validator.jsr303.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <!--dagger-->
+            <dependency>
+                <groupId>com.google.dagger</groupId>
+                <artifactId>dagger</artifactId>
+                <version>${dagger.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

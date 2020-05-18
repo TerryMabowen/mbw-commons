@@ -1,6 +1,10 @@
 package com.github.mbw.commons.kit.valid;
 
 
+import com.baidu.unbiz.fluentvalidator.FluentValidator;
+import com.baidu.unbiz.fluentvalidator.Result;
+import com.baidu.unbiz.fluentvalidator.jsr303.HibernateSupportedValidator;
+
 import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
