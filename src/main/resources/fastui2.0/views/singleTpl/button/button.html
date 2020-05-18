@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>按钮</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" href="../../../static/layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="../../../static/style/admin.css" media="all">
+		<link rel="stylesheet" type="text/css" href="../../../static/style/fastui.css" />
+	</head>
+
+	<body>
+
+		<div class="layui-fluid">
+			<div class="layui-card">
+				<div class="layui-card-header fastui-card-header">
+					<script type="text/html" template>
+						<span>{{localStorage.getItem("title")}}</span>
+					</script>
+				</div>
+				<div class="layui-card-body">
+					<div class="layui-card-body">
+						<fieldset class="layui-elem-field layui-field-title fastui-elem-field">
+							<legend>填色按钮</legend>
+						</fieldset>
+						<div>
+							<button class="fastui-btn layui-btn" id="openTab">默认按钮</button>
+							<button class="fastui-btn layui-btn fastui-btn-org" id="closeTab">暖色按钮</button>
+							<button class="fastui-btn layui-btn fastui-btn-blue">蓝紫按钮</button>
+							<button class="fastui-btn layui-btn fastui-btn-green">通过按钮</button>
+							<button class="fastui-btn layui-btn fastui-btn-warn">警告按钮</button>
+						</div>
+						<fieldset class="layui-elem-field layui-field-title fastui-elem-field">
+							<legend>边框按钮</legend>
+						</fieldset>
+						<div>
+							<button class="layui-btn layui-btn-primary">原始按钮</button>
+							<button class="layui-btn layui-btn-primary fastui-btn-border-blue">默认按钮</button>
+							<button class="layui-btn layui-btn-primary fastui-btn-border-org">暖色按钮</button>
+							<button class="layui-btn layui-btn-primary fastui-btn-border-sky">百搭按钮</button>
+							<button class="layui-btn layui-btn-primary fastui-btn-border-green">通过按钮</button>
+							<button class="layui-btn layui-btn-primary fastui-btn-border-warn">警告按钮</button>
+						</div>
+						<fieldset class="layui-elem-field layui-field-title fastui-elem-field">
+							<legend>标签标识</legend>
+						</fieldset>
+						<div>
+							<button class="layui-btn-xs layui-btn-primary fastui-btn-radius">已支付</button>
+							<button class="layui-btn-xs layui-btn-primary fastui-btn-border-blue fastui-btn-radius">审核中</button>
+							<button class="layui-btn-xs layui-btn-primary fastui-btn-border-org fastui-btn-radius">未支付</button>
+							<button class="layui-btn-xs layui-btn-primary fastui-btn-border-sky fastui-btn-radius">未审核</button>
+							<button class="layui-btn-xs layui-btn-primary fastui-btn-border-green fastui-btn-radius">已通过</button>
+							<button class="layui-btn-xs layui-btn-primary fastui-btn-border-warn fastui-btn-radius">未通过</button>
+						</div>
+						<div>
+							<button class="layui-btn-xs layui-btn-primary">已支付</button>
+							<button class="layui-btn-xs layui-btn-primary fastui-btn-border-blue">审核中</button>
+							<button class="layui-btn-xs layui-btn-primary fastui-btn-border-org">未支付</button>
+							<button class="layui-btn-xs layui-btn-primary fastui-btn-border-sky">未审核</button>
+							<button class="layui-btn-xs layui-btn-primary fastui-btn-border-green">已通过</button>
+							<button class="layui-btn-xs layui-btn-primary fastui-btn-border-warn">未通过</button>
+						</div>
+						<fieldset class="layui-elem-field layui-field-title fastui-elem-field">
+							<legend>填色按钮组</legend>
+						</fieldset>
+				  		<div class="layui-btn-group">
+						  <button class="layui-btn fastui-btn fastui-btn-green"><i class="layui-icon">&#xe60a;</i>查看</button>
+						  <button class="layui-btn fastui-btn fastui-btn-blue"><i class="layui-icon">&#xe654;</i>增加</button>
+						  <button class="layui-btn fastui-btn fastui-btn-org"><i class="layui-icon">&#xe642;</i>编辑</button>
+						  <button class="layui-btn fastui-btn fastui-btn-warn"><i class="layui-icon">&#xe640;</i>删除</button>
+						</div>
+						<fieldset class="layui-elem-field layui-field-title fastui-elem-field">
+							<legend>边框按钮组</legend>
+						</fieldset>
+						<div class="layui-btn-group">
+							<button class="layui-btn layui-btn-primary layui-btn-sm">
+							    <i class="layui-icon">&#xe654;</i>
+							</button>
+							<button class="layui-btn layui-btn-primary layui-btn-sm">
+							    <i class="layui-icon">&#xe642;</i>
+							</button>
+							<button class="layui-btn layui-btn-primary layui-btn-sm">
+							    <i class="layui-icon">&#xe640;</i>
+							</button>
+							<button class="layui-btn layui-btn-primary layui-btn-sm">
+							    <i class="layui-icon">&#xe602;</i>
+						  	</button>
+						</div>
+						<div class="layui-btn-group fastui-btn-group">
+							<button class="layui-btn layui-btn-primary layui-btn-sm">
+							    <i class="layui-icon">&#xe654;</i>查看
+							</button>
+							<button class="layui-btn layui-btn-primary layui-btn-sm">
+							    <i class="layui-icon">&#xe642;</i>查看
+							</button>
+							<button class="layui-btn layui-btn-primary layui-btn-sm">
+							    <i class="layui-icon">&#xe640;</i>查看
+							</button>
+							<button class="layui-btn layui-btn-primary layui-btn-sm">
+							    <i class="layui-icon">&#xe602;</i>查看
+						  	</button>
+						</div>
+						<fieldset class="layui-elem-field layui-field-title fastui-elem-field">
+							<legend>颜色</legend>
+						</fieldset>
+						<div>
+							<p class="fastui-font-color-sky">默认颜色：1e9fff</p>
+							<p class="fastui-font-color-org">暖色颜色：ff9865</p>
+							<p class="fastui-font-color-green">通过颜色：56c881</p>
+							<p class="fastui-font-color-blue">蓝紫颜色：5582e9</p>
+							<p class="fastui-font-color-warn">警告颜色：e95555</p>
+							<p class="fastui-font-color-ash">置灰颜色：c9c9c9</p>
+						</div>
+						<fieldset class="layui-elem-field layui-field-title fastui-elem-field">
+							<legend>建议按钮颜色的对应</legend>
+						</fieldset>
+						<div style="margin-bottom: 20px;">
+							<p>1.颜色与功能的搭配可由具体情况做最终决定，在此仅供参考</p>
+							<p>2.用色比例上：橙色小比例使用，主要起颜色区分作用(原因：系统目前主色为蓝紫色，如果橙色大比例使用的话会使得页面很风格不一致)</p>
+							<p>3.取消与重置等类似含义的按钮取的是#555边框为#c9c9c9,该按钮为fastui原始按钮的样式</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../static/layui/layui.js"></script>
+		<script>
+		  layui.config({
+		    base: '../../../static/' //静态资源所在路径
+		  }).extend({
+		    index: 'lib/index' //主入口模块
+		  }).use(['index'],function(){
+		  	var $=layui.$;
+		  	$("#openTab").click(function(){
+		  		parent.layui.index.openTabsPage('singleTpl/form/group.html','表单');
+		  	});
+		  	$("#closeTab").click(function(){
+		  		parent.layui.index.refreshAndCloseTabs('/singleTpl/form/group.html','singleTpl/button/button.html');
+		  	})
+		  });
+		</script>
+	</body>
+
+</html>

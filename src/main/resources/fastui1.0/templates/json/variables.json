@@ -1,0 +1,26 @@
+{
+	"code": 0,
+	"msg": "",
+	"count": 388,
+	"data": [{
+		"id": "1",
+		"name": "price",
+		"remark": "订单销售价格",
+		"type": "货币"
+	}, {
+		"id": "2",
+		"name": "count",
+		"remark": "订单数量",
+		"type": "整数"
+	}, {
+		"id": "3",
+		"name": "belong_department_id",
+		"remark": "订单归属部门",
+		"type": "字符串"
+	}, {
+		"id": "4",
+		"name": "belong_department_name",
+		"remark": "订单销售价格",
+		"type": "货币"
+	}]
+}

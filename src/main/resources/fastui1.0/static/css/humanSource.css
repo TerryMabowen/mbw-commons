@@ -1,0 +1,235 @@
+.fastui-seacher-bg>div.fastui-seacher-type-title {
+	width: 42px;
+}
+
+.fastui-loading-gif {
+	position: fixed;
+	height: 100vh;
+	line-height: 100vh;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: #fff;
+	z-index: 9999;
+	text-align: center;
+}
+
+.fastui-loading-gif img {
+	width: 100px;
+}
+
+
+.fastui-home-header {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+.fastui-home-header img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	box-shadow: 0 0 10px #eee;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+
+.fastui-header-tips {
+	font-size: 20px;
+	color: #666;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.fastui-header-search {
+	width: 300px;
+	height: 30px;
+	margin-top: 36px;
+	position: relative;
+}
+
+.fastui-header-search i {
+	position: absolute;
+	right: 10px;
+	top: 3px;
+}
+
+.fastui-header-manual {
+	padding: 40px;
+}
+
+/*.fastui-single-content a {
+	font-size: 14px;
+	color: #1E9FFF;
+}*/
+
+#fastui-calendar .layui-laydate,
+.layui-laydate-hint {
+	border: none !important;
+	width: 100%;
+	box-shadow: 0 0 0 transparent !important;
+}
+
+#fastui-calendar .layui-laydate-header {
+	border: none !important;
+}
+#fastui-calendar .layui-laydate-main{
+	width: 100%!important;
+}
+#fastui-calendar .layui-laydate-content td,
+#fastui-calendar .layui-laydate-content th{
+	width: 100px;
+}
+body .layui-laydate .layui-this{
+	background-color: #1E9FFF!important;
+}
+
+.fastui-home .fastui-seacher-tabbar {
+	height: 135px;
+}
+
+.fastui-home .fastui-seacher-tabbar-tatol,
+.fastui-home .fastui-seacher-tabbar-right {
+	height: 125px;
+}
+
+.fastui-home .fastui-seacher-tabbar-flex:first-child {
+	margin-bottom: 25px;
+}
+
+#myEchart {
+	width: 100%;
+	height: 400px;
+}
+
+.fastui-search li {
+	padding: 5px 10px 10px;
+	display: inline-block;
+}
+
+.fastui-search li.fastui-this {
+	color: #1E9FFF;
+}
+
+.fastui-tab-btn li {
+	text-align: center;
+	max-width: 180px;
+	height: 40px;
+	margin: auto;
+	line-height: 40px;
+	font-size: 16px;
+	color: #666;
+	background-color: #eee;
+	margin-top: 15px;
+}
+
+.fastui-tab-btn li:hover {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.fastui-tab-btn li.fastui-this {
+	color: #1E9FFF;
+}
+
+.fastui-tab-content>div:not(:first-child) {
+	display: none;
+}
+
+.fastui-person-info {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.fastui-person-info img {
+	width: 130px;
+	height: 130px;
+	/*border-radius: 50%;*/
+	/*box-shadow: 0 0 10px #eee;*/
+	margin-bottom: 10px;
+}
+
+.fastui-person-info p {
+	text-align: center;
+	line-height: 32px;
+}
+
+#fastui-personnel .layui-card,
+#fastui-salary .layui-card {
+	box-shadow: none;
+}
+
+.fastui-card-header-center {
+	text-align: center;
+}
+.fastui-card-header-center > div{
+	position: absolute;
+	top: 0;
+	right: 20px;
+}
+
+.fastui-progress-item {
+	width: 200px;
+	cursor: pointer;
+	cursor: hand;
+	transition: all 2s;
+}
+
+.fastui-home-header .layui-progress {
+	width: 400px;
+	margin-top: 28px;
+}
+
+.fastui-progress-item.fastui-this div,
+.fastui-progress-item:hover div {
+	color: #1E9FFF;
+	font-weight: bold;
+}
+
+.fastui-progress-bg {
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	border-radius: 50%;
+	background-color: #eee;
+	margin: 0 auto 10px;
+}
+
+.fastui-progress-item.fastui-this .fastui-progress-bg,
+.fastui-progress-item:hover .fastui-progress-bg {
+	color: #fff;
+	background-color: #1E9FFF;
+	transform: scale(1.02);
+	transition: all .5s;
+}
+
+.fastui-progress-item div {
+	text-align: center;
+	color: #666;
+}
+
+.fastui-table-tips{
+	margin-bottom: 10px;
+	padding-left: 5px;
+	line-height: 16px;
+}
+.fastui-table-tips span,
+.fastui-table-tips strong{
+	margin: 0 5px;
+	display: inline-block;
+}
+
+.fastui-progress-content>div:not(:first-child) {
+	display: none;
+}
+.fastui-human-photo button{
+	margin-top: 20px;
+	width: 140px;
+}
+.fastui-person-info .layui-upload-drag{
+	width: 130px;
+}
+.fastui-person-info .layui-upload-drag .layui-icon{
+	color: #1E9FFF;
+}

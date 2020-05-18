@@ -1,0 +1,1825 @@
+/******base******/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.fastui-version{
+	color: #999;
+	text-align: center;
+	font-size: 14px;
+	margin-top: 10px;
+}
+.fastui-version span{
+	margin: 0 10px;
+}
+/*******loading****/
+@-webkit-keyframes animal {
+  0%{
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+  }
+}
+.fastui-loading{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	background: rgba(255,255,255,0.3);
+}
+.fastui-loading i{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 38px;
+	-webkit-animation: animal 1s infinite linear ;
+	-webkit-transform-origin: center center;
+	-ms-transform-origin: center center;
+	transform-origin: center center;
+}
+/*****editAdminCss****/
+
+.layui-layout-admin .layui-layout-left,
+.layadmin-pagetabs,
+.layui-layout-admin .layui-body,
+.layui-layout-admin .layui-footer {
+	left: 0;
+}
+
+.layui-layout-admin .layui-header .layui-nav .layui-this:after,
+.layui-layout-admin .layui-header .layui-nav-bar{
+	background-color: #1E9FFF;
+}
+.layui-layout-admin .layui-header .layui-nav .layui-nav-child a,
+.layui-layout-admin .layui-header .layui-nav .layui-nav-child a span{
+	font-size: 14px;
+}
+.layui-layout-admin .layui-header a,
+.layui-layout-admin .layui-header a cite{
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.layadmin-backlog-body p cite{
+	color: #1e9fff;
+}
+.layui-layer-adminRight{
+	top: 0 !important;
+}
+.layadmin-shortcut li cite{
+	font-size: 12px;
+}
+
+
+/*****topNav****/
+
+.fastui-logo img {
+	width: 45px;
+	margin-bottom: 16px;
+}
+
+.fastui-header .layui-layout-left .layui-nav-item>a cite {
+	font-size: 15px;
+	font-weight: 600;
+	color: #FFFFFF;
+}
+
+.fastui-logo span {
+	color: #FFFFFF;
+	font-size: 12px;
+	display: inline-block;
+	margin-left: 5px;
+}
+.fastui-logo span strong{
+	display: block;
+	line-height: 7px;
+	font-weight: 500;
+	font-size: 12px;
+	margin-top: 8px;
+}
+.layui-layout-admin .fastui-header .layui-layout-left .layui-nav-item {
+	margin: 0 10px;
+}
+
+.layui-layout-admin .fastui-header .layui-layout-left .layui-nav-item>a {
+	padding: 0 10px;
+	border-bottom: 3px solid transparent;
+	cursor: pointer;
+}
+
+.fastui-header .layui-layout-left .layui-nav-item>a span {
+	display: none;
+}
+
+.fastui-nav-child.layui-nav-child {
+	padding: 10px;
+}
+.fastui-nav-child.layui-nav-child > div{
+	line-height: 20px;
+}
+
+.layui-nav .fastui-nav-child.layui-nav-child a:hover {
+	background: none;
+}
+
+.fastui-nav-child li {
+	display: inline-block;
+    /* padding: 0 10px; */
+    width: 95px;
+    margin: 0 5px; 
+    white-space: normal;
+    vertical-align: top;
+    line-height: 30px;
+}
+
+.layui-layout-admin .fastui-header .layui-layout-left>span {
+	display: none;
+}
+.layui-layout-admin .layui-header .layui-nav .layui-nav-child a{
+	color: #1E9FFF;
+	padding: 0;
+}
+
+.layui-layout-admin .fastui-header.layui-header .layui-nav .fastui-nav-child.layui-nav-child li.layui-this a {
+	color: #1E9FFF;
+}
+
+.layui-layout-admin .fastui-header.layui-header .layui-nav .fastui-nav-child.layui-nav-child li.layui-this:after {
+	height: 0;
+}
+
+.layui-elem-field {
+	margin: 5px 0;
+}
+.layui-nav-child .layui-elem-field {
+	margin: 0 0 5px;
+	line-height: 24px;
+}
+
+.layui-elem-field legend {
+	color: #333;
+	font-size: 12px;
+	font-weight: 600;
+}
+.layui-layout-admin .layui-header.fastui-header{
+	height: 42px;
+	background: #1E9FFF;
+}
+.layui-layout-admin .layui-logo, .layui-layout-admin .layui-header .layui-nav .layui-nav-item{
+	height: 42px;
+	line-height: 42px;
+}
+.layui-nav .layui-nav-child a:hover{
+	background-color: transparent;
+	cursor: pointer;
+}
+.fastui-photo{
+	width: 30px;
+	margin-right: 5px;
+	border-radius: 50%;
+}
+
+.fastui-nav-right-child.layui-nav-child{
+	padding-top: 0;
+	width: 300px;
+	text-align: center;
+	color: #333333;
+}
+.fastui-nav-right-photo{
+	background: #1E9FFF;
+	padding: 15px 0;
+	color: #FFFFFF;
+}
+.fastui-nav-right-photo img{
+	width: 82px;
+	height: 82px;
+	margin-bottom: 10px;
+	border-radius: 50%;
+}
+.fastui-nav-right-photo p{
+	margin-bottom: 0;
+	line-height: 26px;
+}
+.fastui-nav-right-child dd button{
+	margin: 10px 0;
+}
+.fastui-nav-right-opt{
+	text-align: left;
+	border-top: 1px solid #EEEEEE;
+	border-bottom: 1px solid #EEEEEE;
+	padding-left: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.fastui-nav-right-opt p{
+	color: #333333;
+	cursor: pointer;
+}
+.fastui-nav-right-opt p i{
+	margin-right: 5px;
+}
+
+/*.fastui-header .layui-layout-left li.layui-nav-item:hover>a,
+.fastui-header .layui-layout-left li.layui-nav-item.fastui-this>a {
+	border-bottom: 3px solid #1E9FFF;
+}
+
+.fastui-header .layui-layout-left li.layui-nav-item:hover>a cite,
+.fastui-header .layui-layout-left li.layui-nav-item.fastui-this>a cite {
+	color: #1E9FFF;
+}*/
+
+/*.fastui-nav-right-child.layui-nav-child dd{
+	display: inline-block;
+}*/
+
+/*.fastui-switch-role{
+	position: relative;
+}
+.fastui-role{
+	display: none;
+    position: absolute;
+    left: 0;
+    top: 46px;
+    min-width: 100%;
+    line-height: 36px;
+    padding: 5px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12);
+    border: 1px solid #d2d2d2;
+    background-color: #fff;
+    z-index: 100;
+    border-radius: 2px;
+    white-space: nowrap;
+}*/
+
+/******tabTop********/
+
+.layadmin-pagetabs .layui-tab-title li.layui-this:after,
+.layadmin-pagetabs .layui-tab-title li:after {
+	height: 0;
+}
+.layadmin-pagetabs{
+	top: 42px;
+}
+
+/*****侧滑应用导航******/
+.fastui-sys-role {
+	height: 30px;
+	overflow: hidden;
+	line-height: 30px;
+}
+
+.fastui-sys-role span {
+	display: inline-block;
+	background: #1E9FFF;
+	color: #FFFFFF;
+	font-size: 12px;
+	padding: 2px 5px;
+	border-radius: 5px;
+	margin-top: 6px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	height: 18px;
+	line-height: 18px;
+}
+.fastui-side-con img{
+	width: 100%;
+}
+.fastui-app-nav > div{
+	margin: 10px 0;
+	padding: 10px 0;
+	border-bottom: 1px solid #EEEEEE;
+}
+.fastui-app-nav dd h3{
+	font-size: 14px;
+}
+.fastui-app-nav dd p{
+	font-size: 12px;
+}
+
+/*****content**********/
+.layui-layout-admin .layui-body{
+	top: 83px;
+}
+/*****indexcontent/personaldata****/
+.fastui-personal-data{
+	text-align: center;
+	color: #333333;
+	width: 220px;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+.fastui-personal-data img{
+	width: 80px;
+	height: 80px;
+	margin-bottom: 10px;
+	border-radius: 50%;
+}
+.fastui-personal-data p{
+	color: #333333;
+	font-weight: 600;
+}
+.fastui-panel-role{
+	width: 294px;
+}
+.fastui-panel-role span{
+	color: #333333;
+	font-weight: 600;
+}
+.fastui-personal-data label{
+	font-size: 14px;
+}
+.fastui-personal-data input{
+	width: 100px;
+	font-size: 14px;
+	font-weight: 600;
+}
+.fastui-panel-role-list{
+	display: inline-block;
+	position: relative;
+}
+.fastui-panel-role-list a{
+	text-decoration: none;
+	cursor: pointer;
+}
+.fastui-panel-role-list a:hover{
+	text-decoration: none;
+}
+.fastui-panel-role-list a i{
+	font-size: 14px;
+}
+.fastui-panel-role-list ul{
+	display: none;
+	position: absolute;
+	top: 28px;
+	left: 0;
+	background: #FFFFFF;
+	color: #333333;
+	border-radius: 2px;
+	width: 120px;
+	box-shadow: 0 0 10px 2px #EEEEEE;
+	z-index: 9;
+	padding: 5px 0;
+}
+.fastui-panel-role-list ul li{
+	list-style: none;
+	color: #333333;
+	text-align: left;
+	cursor: pointer;
+	height: 36px;
+	line-height: 36px;
+	padding-left: 10px;
+}
+.fastui-panel-role-list ul li:hover{
+	background: rgba(30,159,255,0.1);
+	color: #1E9FFF;
+}
+
+/******form************/
+
+.layui-input,
+.layui-select {
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	border-color: #CCCCCC;
+	font-size: 12px;
+}
+
+.layui-form-label {
+	font-weight: bold;
+	padding: 5px 10px;
+	font-size: 12px;
+	width: 100px;
+	color: #333333;
+}
+
+.layui-input-block {
+	margin-left: 120px;
+	min-height: 30px;
+}
+
+.layui-form-mid {
+	font-size: 12px;
+	padding: 5px 0!important;
+}
+
+.layui-form-checkbox span,
+.layui-form-radio *,
+.layui-form {
+	font-size: 12px;
+}
+
+.layui-form-checked[lay-skin=primary] i,
+.layui-form-onswitch,
+.layui-form-checked span {
+	border-color: #1E9FFF;
+	background-color: #1E9FFF;
+}
+
+.layui-form-checkbox[lay-skin=primary]:hover i {
+	border-color: #1E9FFF;
+}
+
+.layui-form-radio>i:hover,
+.layui-form-radioed>i,
+.layui-form-checked i,
+.layui-form-checked:hover i {
+	color: #1E9FFF;
+}
+
+.layui-layout-admin .layui-footer {
+	padding: 0;
+}
+
+.layui-form-select dl dd.layui-this {
+	background-color: #1E9FFF;
+}
+.layui-form-switch{
+	margin-top: 3px;
+}
+.layui-form-item .layui-form-checkbox[lay-skin=primary],
+.layui-form-checkbox[lay-skin=primary]{
+	margin-top: 5px;
+}
+.fastui-form .layui-form-item .layui-input-inline{
+	width:300px;
+}
+
+
+/****无边框****/
+.fastui-frameless-input.layui-input,
+.fastui-frameless-input.layui-textarea,
+.fastui-frameless-input .layui-form-select .layui-input {
+	border: none;
+	color: #333333 !important;
+}
+
+.fastui-frameless-input .layui-form-select i {
+	display: none;
+}
+
+.fastui-frameless-input.layui-input:hover,
+.fastui-frameless-input.layui-textarea:hover,
+.fastui-frameless-input .layui-form-select .layui-input:hover {
+	border: none !important;
+	box-shadow: none;
+}
+
+.fastui-frameless-input .xm-select-parent .xm-input {
+	border: none;
+}
+
+.fastui-frameless-input .xm-select-parent .xm-select-sj,
+.fastui-frameless-input div[xm-select-skin=default] .xm-select-title div.xm-select-label>span i {
+	display: none;
+}
+
+.fastui-frameless-input div[xm-select-skin=default] .xm-select-title div.xm-select-label>span {
+	background: none;
+	border: none;
+}
+.fastui-frameless-input.layui-input.fastui-input-special {
+	font-size: 15px;
+	font-weight: 600;
+	color: #ff9865 !important;
+}
+.layui-form-label span {
+	color: #E95555;
+	font-weight: normal;
+}
+
+/**********laydate********/
+
+.laydate-theme-date-color.layui-laydate .layui-this {
+	background-color: #1E9FFF !important;
+}
+
+.laydate-theme-date-color .layui-laydate-content td.laydate-selected {
+	background-color: #cbdfff;
+}
+
+.laydate-theme-date-color .laydate-selected:hover {
+	background-color: #cbdfff !important;
+}
+
+.laydate-theme-date-color .layui-laydate-header i:hover,
+.laydate-theme-date-color .layui-laydate-header span:hover {
+	color: #1E9FFF;
+}
+
+.laydate-theme-date-color .layui-laydate-footer span:hover {
+	color: #1E9FFF;
+}
+
+
+/*********btn********/
+
+.layui-btn {
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px;
+}
+
+.layui-btn-lg {
+	height: 44px;
+	line-height: 44px;
+	padding: 0 25px;
+	font-size: 16px;
+}
+
+.layui-btn-xs {
+	margin: 0 5px 10px;
+}
+
+.fastui-btn.layui-btn {
+	background-color: #1E9FFF;
+}
+
+.fastui-btn.layui-btn.fastui-btn-blue {
+	background-color: #5582e9;
+}
+
+.fastui-btn.layui-btn.fastui-btn-org {
+	background-color: #ff9865;
+}
+
+.fastui-btn.layui-btn.fastui-btn-warn {
+	background-color: #e95555;
+}
+
+.fastui-btn.layui-btn.fastui-btn-green {
+	background-color: #56c881;
+}
+
+.fastui-btn-border-blue.layui-btn-primary,
+.fastui-btn-border-blue.layui-btn-primary:hover {
+	color: #5582e9;
+	border: 1px solid #5582e9;
+}
+
+.fastui-btn-border-org.layui-btn-primary,
+.fastui-btn-border-org.layui-btn-primary:hover {
+	color: #ff9865;
+	border: 1px solid #ff9865;
+}
+
+.fastui-btn-border-sky.layui-btn-primary,
+.fastui-btn-border-sky.layui-btn-primary:hover {
+	color: #1E9FFF;
+	border: 1px solid #1E9FFF;
+}
+
+.fastui-btn-border-green.layui-btn-primary,
+.fastui-btn-border-green.layui-btn-primary:hover {
+	color: #56c881;
+	border: 1px solid #56c881;
+}
+
+.fastui-btn-border-warn.layui-btn-primary,
+.fastui-btn-border-warn.layui-btn-primary:hover {
+	color: #e95555;
+	border: 1px solid #e95555;
+}
+
+.fastui-btn-group.layui-btn-group .layui-btn-primary:first-child,
+.fastui-btn-group.layui-btn-group .layui-btn+.layui-btn {
+	color: #1E9FFF;
+}
+.fastui-btn-radius.layui-btn,
+.fastui-btn-radius.layui-btn-xs {
+	border-radius: 15px;
+}
+.layui-btn .layui-icon {
+	margin-right: 4px;
+	font-size: 14px;
+}
+
+.layui-btn-primary:hover {
+	border-color: #1E9FFF;
+	color: #1E9FFF;
+}
+
+.layui-btn-xs.layui-btn-primary:hover {
+	border-color: initial;
+}
+
+.layui-table .layui-btn-xs {
+	margin: 0;
+	height: 20px;
+	line-height: 20px;
+}
+
+.layui-btn-group .layui-btn-primary:hover {
+	color: #1E9FFF;
+}
+
+
+/***********card*********/
+.fastui-card.layui-card {
+    box-shadow: 0 0px 2px 2px rgba(0, 0, 0, .05);
+    height: 100%;
+    position: relative;
+}
+
+.fastui-card-header {
+	border-bottom: 1px solid #EEEEEE;
+	border-left: 3px solid #1E9FFF;
+}
+
+.fastui-card-header>span {
+	margin-right: 20px;
+}
+.fastui-card-header>div {
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+.fastui-card-header>div a {
+	color: #1E9FFF;
+	cursor: pointer;
+	font-size: 12px;
+	margin: 0 3px;
+}
+
+.fastui-card-header-right{
+	position: absolute;
+	top: 0px;
+	right: 10px;
+}
+.fastui-card-header-right a{
+	font-size: 12px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 5px;
+}
+.fastui-card-header-right a:hover{
+	color: #1E9FFF;
+}
+.layui-card-header .fastui-card-header-right a i{
+	position: relative;
+	top: 0;
+	right: 0;
+	margin-top: 0;
+	font-size: 14px;
+	margin-right: 5px;
+}
+
+.fastui-card-body-vh {
+	height: calc(100vh - 125px);
+	overflow: auto;
+}
+
+/*********table***********/
+
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+	background-color: #1E9FFF;
+}
+
+.layui-laypage a:hover {
+	color: #1E9FFF;
+}
+
+.layui-laypage input:focus,
+.layui-laypage select:focus {
+	border-color: #1E9FFF !important;
+}
+
+.layui-table-tool {
+	border: none;
+	background-color: transparent;
+	padding: 10px 0px;
+}
+
+.layui-table-view {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+.layui-table-view .layui-form-checkbox[lay-skin=primary] i{
+	width: 16px;
+	height: 16px;
+}
+
+.layui-table-box {
+	border: 1px solid #e6e6e6;
+}
+
+.layui-table-page {
+	border-bottom: 1px solid #e6e6e6;
+	border-left: 1px solid #e6e6e6;
+	border-right: 1px solid #e6e6e6;
+	border-top: none;
+}
+
+.layui-table-tool-self {
+	right: 0;
+	top: 9px;
+}
+
+.layui-table-tool {
+	background: none;
+	padding: 10px 0px;
+}
+
+.layui-table-tool .layui-inline[lay-event] {
+	border: 1px solid #d1d1d1;
+	width: 65px;
+	height: 30px;
+	border-radius: inherit;
+	vertical-align: middle;
+	line-height: 20px;
+}
+
+.layui-table-tool .layui-inline[lay-event] i {
+	padding-right: 5px;
+	color: #1E9FFF;
+	vertical-align: middle;
+}
+
+.layui-table-tool .layui-inline[lay-event]:hover {
+	border: 1px solid #d1d1d1;
+}
+
+.layui-table-tool .layui-inline[lay-event]:first-of-type {
+	border-right: none;
+	width: 76px;
+}
+
+.layui-table-tool .layui-inline[lay-event] span {
+	color: #1E9FFF;
+}
+
+.layui-table-tool .layui-table-tool-self .layui-inline[lay-event] {
+	margin: 0;
+	font-size: 12px;
+}
+.layui-table-tool .layui-table-tool-self .layui-inline[lay-event=LAYTABLE_PRINT] {
+	border-left: none;
+}
+.fastui-table-toolbar-first .layui-table-tool-temp {
+	padding-right: 85px;
+}
+.fastui-table-toolbar-none .layui-table-tool-temp {
+	padding-right: 0;
+}
+
+.fastui-table-toolbar-two .layui-table-tool-temp {
+	padding-right: 148px;
+}
+.fastui-toolbar-btn button:last-child{
+	margin-right: 0;
+}
+
+.fastui-table-toolbar-color a {
+	font-size: 12px;
+	color: #1E9FFF;
+}
+
+.fastui-table-toolbar-color a:hover {
+	color: #1E9FFF;
+}
+
+.layui-table-tool-panel li .layui-form-checkbox[lay-skin=primary] i {
+	color: #FFFFFF;
+}
+
+.fastui-table-newline .layui-table-view .layui-table {
+	height: auto;
+}
+
+
+.fastui-table-newline .layui-table-cell {
+	white-space: normal;
+	overflow: visible !important;
+	word-wrap: break-word
+}
+
+.layui-table-body td[data-field="operate"] .layui-table-cell {
+	overflow: visible !important;
+}
+
+.layui-table-view .layui-table[lay-size=sm] .layui-table-cell .layui-form-switch{
+	height: 16px;
+    line-height: 16px;
+}
+.layui-table-view .layui-table[lay-size=sm] .layui-table-cell .layui-form-switch i{
+	width: 10px;
+    height: 10px;
+}
+.fastui-table-newline .layui-table-view .layui-table[lay-size=sm] .layui-table-cell {
+	height: auto;
+	overflow-x: hidden;
+	line-height: 16px;
+}
+
+.fastui-table-newline .layui-table-cell {
+	height: auto;
+}
+
+.fastui-table-newline .layui-table-view .layui-table td .layui-table-edit {
+	height: auto;
+}
+
+
+/***水印****/
+.fastui-transparent-bg,.fastui-transparent-bg .layui-table{
+	background: transparent !important;
+	background-color: transparent !important;
+}
+
+
+/*******fastui-seacher-tabbar*****/
+
+.fastui-seacher-tabbar {
+	margin: 15px 0 0;
+	position: relative;
+	height: 60px;
+}
+
+.fastui-seacher-tabbar-tatol {
+	box-shadow: 0px 0px 6px 2px #EEEEEE;
+	width: 100px;
+	height: 50px;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	-webkit-box-orient: vertical;
+	text-align: center;
+	font-size: 12px;
+	border-bottom: 3px solid transparent;
+}
+
+.fastui-seacher-tabbar-tatol:hover {
+	border-bottom: 3px solid #1E9FFF;
+}
+
+.fastui-seacher-tabbar-tatol.fastui-this {
+	border-bottom: 3px solid #1E9FFF;
+}
+
+.fastui-seacher-tabbar span {
+	color: #1E9FFF;
+	font-size: 15px;
+}
+
+.fastui-seacher-tabbar-flex {
+	display: flex;
+	height: 50px;
+}
+
+.fastui-seacher-tabbar-right {
+	width: calc(100% - 100px);
+	margin-left: 110px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 50px;
+}
+
+.fastui-seacher-bg {
+	box-shadow: 0px 0px 6px 2px #EEEEEE;
+	display: flex;
+	margin: 0 10px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.fastui-seacher-bg>div {
+	height: 100%;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	-webkit-box-orient: vertical;
+	text-align: center;
+	border-bottom: 3px solid transparent;
+	flex: 1;
+	width: 100%;
+	min-width: 85px;
+}
+
+.fastui-seacher-bg>div a {
+	border-right: 1px solid #EEEEEE;
+	display: block;
+	width: 100%;
+}
+
+.fastui-seacher-bg>div a p {
+	font-size: 12px;
+}
+
+.fastui-seacher-bg>div:hover {
+	border-bottom: 3px solid #1E9FFF;
+}
+
+.fastui-seacher-bg>div.fastui-this {
+	border-bottom: 3px solid #1E9FFF;
+}
+
+.fastui-seacher-bg>div.fastui-seacher-type-title:hover {
+	border-bottom: 3px solid transparent;
+}
+
+.fastui-seacher-bg>div:last-of-type a {
+	border-right: none;
+}
+
+.fastui-seacher-bg>div.fastui-seacher-type-title {
+	background: #1E9FFF;
+	color: #FFFFFF;
+	height: 48px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	-webkit-box-orient: vertical;
+	text-align: center;
+	width: 28px;
+	padding: 0 15px;
+	flex: unset;
+	font-size: 12px;
+	letter-spacing: 2px;
+	min-width: 40px;
+	cursor: pointer;
+}
+
+.fastui-seacher-bg>div.fastui-seacher-type-title.fastui-seacher-type-title1 {
+	width: 42px;
+	letter-spacing: 1px;
+}
+/*.fastui-seacher-bg>div.fastui-seacher-type-title ~ div{
+	display: none;
+}*/
+.fastui-seacher-bg:not(:first-child)>div.fastui-seacher-type-con{
+	display: none;
+}
+
+
+/**********baseSearch*********/
+
+.fastui-form-seacher .layui-input-inline {
+	width: 100%;
+}
+
+.fastui-toolbar-con {
+	padding: 15px 20px;
+	box-shadow: 0px 0px 10px 2px #EEEEEE;
+	margin-bottom: 10px;
+}
+
+.fastui-field-color {
+	margin-bottom: 15px;
+}
+
+.fastui-field-color legend {
+	color: #1E9FFF;
+}
+
+.fastui-seachertab-hide {
+	color: #1E9FFF;
+	font-size: 14px;
+	margin-right: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	align-items: center;
+	height: 30px;
+	line-height: 30px;
+}
+
+.fastui-seachertab-hide:last-of-type {
+	display: none;
+}
+
+.fastui-seachertab-hide i {
+	font-size: 14px;
+	margin-left: 5px;
+	color: #999999;
+}
+
+.fastui-seachertab-hide:hover {
+	color: #1E9FFF;
+}
+
+
+/*******tab选项卡************/
+
+.layui-tab-brief>.layui-tab-more li.layui-this:after,
+.layui-tab-brief>.layui-tab-title .layui-this:after {
+	border-bottom: 2px solid #1E9FFF;
+}
+
+.layui-card .layui-tab-brief .layui-tab-title li.layui-this {
+	color: #1E9FFF;
+}
+
+.layui-card .layui-tab-brief .layui-tab-title,
+.layui-tab-brief .layui-tab-title {
+	border-bottom: none;
+}
+
+.fastui-tab-title-weight {
+	display: flex;
+}
+
+.fastui-tab-title-weight li {
+	font-weight: 600;
+	flex: 1;
+}
+
+/**********list************/
+.fastui-list-style {
+	padding: 0 15px;
+}
+
+.fastui-list-style li {
+	height: 32px;
+	line-height: 32px;
+}
+
+.fastui-list-style li a {
+	color: #666666;
+	float: left;
+	font-size: 12px;
+}
+
+.fastui-list-style li a:hover {
+	color: #1E9FFF;
+}
+
+.fastui-list-style li span {
+	float: right;
+	font-size: 12px;
+	color: #1E9FFF;
+
+}
+
+.fastui-list-style li.fastui-this a {
+	color: #1E9FFF;
+}
+/******dtree list**********/
+.fastui-dtree-list{
+	padding: 15px;
+}
+.fastui-dtree-list li {
+	height: 45px;
+	line-height: 45px;
+}
+
+.fastui-dtree-list li a {
+	color: #666666;
+	float: left;
+	height: 30px;
+	overflow: hidden;
+	width: 196px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.fastui-dtree-list li span {
+	float: right;
+}
+
+.fastui-dtree-list li a:hover {
+	color: #1E9FFF;
+}
+
+.fastui-dtree-list li.fastui-this a {
+	color: #1E9FFF;
+}
+/**************dtree********/
+.fastui-dtree-title {
+	font-size: 14px;
+	color: #333333;
+	margin-top: 10px;
+	font-weight: 600;
+}
+
+.fastui-dtree-title span {
+	float: right;
+}
+.fastui-tree .dtree-nav-checkbox-div>i.dtreefont:last-child {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.fastui-tree .dtree {
+	width: auto;
+}
+
+.fastui-tree {
+	border-radius: 2px;
+	padding: 10px 0;
+}
+
+
+.fastui-tree .dtree-theme-item:hover cite {
+	color: #1E9FFF !important;
+}
+
+.fastui-tree [class^="dtree-icon-"],
+.fastui-tree [class*=" dtree-icon-"] {
+	color: #999999 !important;
+	width: 8px;
+	display: inline-block;
+}
+
+.fastui-tree [class*=" dtree-icon-"] {
+	font-size: 12px;
+}
+
+.fastui-tree .dtree-nav-checkbox-div>i {
+	color: #1E9FFF !important;
+	font-size: 15px;
+}
+
+.fastui-tree .dtree-nav-div cite:hover {
+	color: #1E9FFF;
+	opacity: 1;
+}
+
+.fastui-tree .dtree-nav-item {
+	padding-left: 15px;
+}
+
+.fastui-tree .dtree-theme-item-this {
+	background: none !important;
+}
+
+.fastui-tree .dtree-theme-item:hover {
+	background: none !important;
+}
+
+.fastui-tree .dtree-nav-checkbox-div>i.dtreefont:last-child {
+	margin-left: 4px;
+	font-size: 20px !important;
+	width: auto;
+}
+
+.fastui-tree .dtree-nav-div cite {
+	font-size: 14px !important;
+	color: #666666;
+}
+
+.fastui-tree .dtree-nav-div {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.fastui-tree .dtree-nav-checkbox-div>i.dtreefont:hover {
+	opacity: 1;
+}
+
+.fastui-tree .dtree-toolbar-fixed {
+	width: 25px;
+	position: absolute;
+	top: 0;
+	right: 45px;
+}
+
+.fastui-tree .dtree-toolbar-fixed i {
+	color: #1E9FFF !important;
+}
+
+.fastui-tree .dtree-toolbar-fixed [class*=" dtree-icon-"] {
+	padding: 0 3px;
+}
+
+.fastui-tree .dtree-toolbar-fixed a {
+	font-style: normal;
+	color: #1E9FFF;
+	cursor: pointer;
+}
+
+
+.fastui-tree .dtree-toolbar-fixed [class^="dtree-icon-"],
+.fastui-tree .dtree-toolbar-fixed [class*=" dtree-icon-"] {
+	width: 20px;
+	font-size: 16px;
+}
+
+
+/*******erro***********/
+
+.fastui-erro-html {
+	text-align: center;
+	min-height: calc( 100vh - 180px);
+	padding-top: 130px;
+}
+
+.fastui-erro-html p {
+	font-size: 14px;
+	text-align: center;
+	margin-top: 10px;
+	color: #999;
+}
+
+.fastui-erro-html a{
+	color: #999999;
+}
+.fastui-erro-con {
+	position: relative;
+}
+
+.fastui-erro-con a {
+	color: #1E9FFF;
+	font-size: 12px;
+}
+
+.fastui-erro-show {
+	text-align: center;
+	display: none;
+	width: 100%;
+}
+
+.fastui-not-found {
+	width: 350px;
+}
+
+.fastui-erro-url {
+	width: 240px
+}
+
+.fastui-no-data {
+	width: 260px;
+}
+
+.fastui-load-img {
+	width: 240px;
+}
+/****transfer********/
+.fastui-table-transfer .layui-btn{
+	background-color: #1E9FFF;
+	margin-left: 10px;
+}
+.fastui-table-transfer  .layui-btn-disabled, 
+.fastui-table-transfer .layui-btn-disabled:active, 
+.fastui-table-transfer .layui-btn-disabled:hover{
+	background-color: #FBFBFB;
+}
+
+/******formSelects************/
+
+.xm-select-parent .xm-select {
+	min-height: 30px;
+	padding: 0 10px;
+}
+
+.xm-select-parent .xm-select-title div.xm-select-label>span {
+	font-size: 12px;
+}
+
+.xm-select-parent .xm-select-title {
+	min-height: 30px;
+	font-size: 12px;
+}
+
+.xm-select-parent .xm-input {
+	height: 30px;
+	border-color: #CCCCCC;
+}
+
+.xm-form-checkbox>i {
+	border: 1px solid #1E9FFF;
+}
+
+.xm-form-checkbox:hover>i {
+	border-color: #1E9FFF;
+}
+
+.xm-select-parent dl dd.xm-select-this div i,
+div[xm-select-skin=default] dl dd.xm-select-this:not(.xm-dis-disabled) i {
+	color: #1E9FFF;
+}
+
+.xm-form-selected .xm-select,
+.xm-form-selected .xm-select:hover {
+	border-color: #1E9FFF !important;
+}
+
+.xm-select-parent dd .xm-cz:hover {
+	color: #1E9FFF;
+}
+
+div[xm-select-skin] .xm-select-title div.xm-select-label>span {
+	border: 1px solid #1E9FFF;
+}
+
+div[xm-select-skin=default] .xm-select-title div.xm-select-label>span {
+	border: 1px solid #F0F2F5;
+}
+
+.xm-select-parent .xm-select-title div.xm-select-label>span {
+	background-color: #1E9FFF;
+}
+
+div[xm-select-skin=default] dl dd:not(.xm-dis-disabled) i,
+div[xm-select-skin=default] dl dd:not(.xm-dis-disabled) i {
+	border-color: #1E9FFF;
+}
+
+
+/*********分割线*********/
+.fastui-elem-quote{
+	border-left: 3px solid #1e9fff;
+	padding-left: 10px;
+	font-size: 12px;
+	line-height: 8px;
+	background: #f8f8f8;
+}
+
+/********查找带回部分 ********************/
+.fastui-select-department .layui-row,
+.fastui-select-staff .layui-row {
+	padding: 5px 10px;
+}
+
+.fastui-select-department .grid-box,
+.fastui-select-staff .grid-box {
+	padding: 0 10px;
+}
+
+.fastui-select-department .grid-box-header,
+.fastui-select-staff .grid-box-header {
+	line-height: 32px;
+	color: #333333;
+	font-size: 14px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.fastui-select-department .grid-box-header-clear,
+.fastui-select-staff .grid-box-header-clear {
+	cursor: pointer;
+	cursor: hand;
+	color: #1E9FFF;
+}
+
+.fastui-select-department .grid-box-body {
+	padding: 10px 20px;
+	border: 1px solid #E8EAF1;
+	background: rgba(250, 251, 255, 1);
+	height: 375px;
+	overflow-y: auto;
+}
+
+.fastui-select-staff .grid-box-body {
+	padding: 10px 20px;
+	border: 1px solid #E8EAF1;
+	background: rgba(250, 251, 255, 1);
+	height: 500px;
+	overflow-y: hidden;
+}
+
+.fastui-select-department .layui-form-item,
+.fastui-select-staff .layui-form-item,
+.fastui-select-product .layui-form-item {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.fastui-select-department .layui-input,
+.fastui-select-product .layui-input,
+.fastui-select-staff .layui-input {
+	height: 32px;
+	text-indent: 25px;
+	background-color: transparent;
+}
+
+.fastui-select-department .selected,
+.fastui-select-product .selected,
+.fastui-select-staff .selected {
+	/* background: #1E9FFF; */
+	color: #1E9FFF;
+	background-color: #f5fbfe;
+}
+
+.fastui-select-department .layui-tree-entry {
+	height: 25px;
+}
+
+.fastui-select-department .layui-icon-search,
+.fastui-select-product .layui-icon-search,
+.fastui-select-staff .layui-icon-search {
+	position: absolute;
+	padding: 8px 10px;
+	top: 0;
+	left: 0;
+	color: #999999;
+}
+
+.fastui-select-department .layui-form-checkbox i,
+.fastui-select-product .layui-form-checkbox i,
+.fastui-select-staff .layui-form-checkbox i {
+	width: 12px;
+	height: 12px;
+	line-height: 12px;
+	top: 2px;
+}
+
+.fastui-select-department .layui-icon-add-circle-fine,
+.fastui-select-product .layui-icon-add-circle-fine,
+.fastui-select-staff .layui-icon-add-circle-fine {
+	float: right;
+	font-weight: bold;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg)
+}
+
+.fastui-select-department .grid-box-body .layui-card,
+.fastui-select-product .grid-box-body .layui-card,
+.fastui-select-staff .grid-box-body .layui-card {
+	background: transparent;
+	box-shadow: none
+}
+
+.fastui-select-department .grid-box-body .layui-card-header,
+.fastui-select-staff .grid-box-body .layui-card-header {
+	padding: 0;
+	height: 34px;
+	line-height: 34px;
+	font-weight: bold;
+	border-bottom: 1px solid #E8EAF1;
+	color: #333333
+}
+
+.fastui-select-product #product-list .layui-table-body {
+	height: 390px;
+	overflow-y: auto;
+	position: relative;
+	padding-bottom: 40px;
+}
+
+.fastui-select-product #product-list .layui-table-body::-webkit-scrollbar {
+	display: none;
+}
+
+.fastui-select-product #product-list .layui-table-page {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: #fff;
+	z-index: 99;
+}
+
+.fastui-select-department .layui-tree-main {
+	width: 100%;
+}
+
+.fastui-select-department #search,
+.fastui-select-staff #search {
+	display: none;
+}
+
+.fastui-select-department #search .search-item,
+.fastui-select-staff #search .search-item {
+	padding: 5px 0;
+}
+/****详情个人资料***********/
+.fastui-person-info {
+	text-align: center;
+	padding-top: 50px;
+	min-height: calc(100vh - 110px);
+}
+
+.fastui-person-info img {
+	width: 130px;
+	height: 130px;
+	margin-bottom: 10px;
+}
+
+.fastui-person-info p {
+	text-align: center;
+	line-height: 32px;
+}
+
+/********************团购首页******************/
+
+.fastui-tuan-tab.fastui-tab-con {
+	display: block;
+}
+
+.fastui-tuan-tab>div {
+	border-right: 1px solid #EEEEEE;
+	margin: 30px 0;
+}
+
+.fastui-tuan-tab>div:last-of-type {
+	border-right: none;
+}
+
+.fastui-tuan-tab>div p {
+	color: #666666;
+	font-size: 14px;
+}
+
+.fastui-tuan-tab>div strong {
+	color: #333333;
+	font-weight: normal;
+	font-size: 24px;
+}
+
+.fastui-tuan-rate {
+	box-shadow: 0px 0px 8px 3px #EEEEEE;
+	padding: 10px 20px 20px;
+	border-radius: 3px;
+	position: relative;
+}
+
+.fastui-tuan-rate h2 {
+	font-size: 14px;
+	color: #333333;
+	font-weight: 600;
+}
+
+.fastui-tuan-rate-con {
+	text-align: center;
+}
+
+.fastui-tuan-rate-con>div {
+	border-right: 1px solid #EEEEEE;
+}
+
+.fastui-tuan-rate-con>div:last-of-type {
+	border-right: none;
+}
+
+.fastui-tuan-unopen {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: #EEEEEE;
+	border-bottom-left-radius: 15px;
+	color: #666666;
+	font-size: 12px;
+	padding: 3px 20px;
+}
+
+
+
+.fastui-fastentry-bg {
+	width: 100%;
+	padding: 10px 0;
+	cursor: pointer;
+}
+
+.fastui-fastentry-bg:hover {
+	box-shadow: 0px 0px 8px -6px #4D4D4D;
+}
+
+.fastui-fastentry-bg:hover dl dd p {
+	color: #1E9FFF;
+}
+
+.fastui-fastentry-bg:hover dl dt img {
+	width: 95px;
+	transition: width 0.2s;
+	-webkit-transition: width 0.2s;
+}
+
+.fastui-fastentry-bg dl {
+	width: 100%;
+	border-right: 1px solid #EEEEEE;
+	text-align: center;
+}
+
+.fastui-fastentry-bg dl dt {
+	display: inline-block;
+	vertical-align: middle;
+	width: 95px;
+	height: 95px;
+	overflow: hidden;
+}
+
+.fastui-fastentry-bg dl dt img {
+	width: 92px;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+.fastui-fastentry-bg dl dd {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+	padding-top: 10px;
+	text-align: left;
+}
+
+.fastui-fastentry-bg dl dd p {
+	font-weight: 600;
+	font-size: 14px;
+	color: #333333;
+}
+.fastui-tab-con div {
+	text-align: center;
+	font-size: 14px;
+	margin-top: 35px;
+}
+
+.fastui-tab-con div strong {
+	display: block;
+	font-size: 24px;
+	margin: 10px 0;
+}
+
+.fastui-tab-con div strong cite {
+	font-style: normal;
+	font-size: 12px;
+}
+
+.fastui-tab-con div span {
+	display: block;
+	font-size: 12px;
+}
+
+/********数据样式*********/
+.fastui-number-content {
+	text-align: center;
+	width: 100%;
+	border-right: 1px solid #EEEEEE;
+	margin: 20px 0;
+	height: 100%;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	-webkit-box-orient: vertical;
+	text-align: center
+}
+
+.fastui-number-title {
+	color: #333333;
+	font-size: 14px;
+}
+
+.fastui-number-price {
+	font-size: 22px;
+	font-weight: 600;
+	margin: 5px 0;
+}
+
+.fastui-number-notes {
+	font-size: 12px;
+	color: #666666;
+}
+
+.fastui-flex {
+	display: flex;
+	vertical-align: middle;
+	text-align: center;
+	align-items: center;
+}
+
+.fastui-flex-list {
+	flex: 1;
+}
+.fastui-card-header-date {
+	color: #1E9FFF;
+	border: none;
+	background: none;
+	padding: 4px;
+	margin: 0 4px;
+	font-size: 14px;
+	border-bottom: 2px solid transparent;
+}
+
+.fastui-card-header-date:hover {
+	color: #5582e9;
+}
+
+.fastui-card-header-date.fastui-this {
+	border-bottom: 2px solid #1E9FFF;
+}
+/******字体颜色******/
+.fastui-font-color-blue {
+	color: #5582E9 !important;
+}
+
+.fastui-font-color-org {
+	color: #ff9865 !important;
+}
+
+.fastui-font-color-green {
+	color: #56c881 !important;
+}
+
+.fastui-font-color-sky {
+	color: #1E9FFF !important;
+}
+
+.fastui-font-color-warn {
+	color: #e95555 !important;
+}
+
+.fastui-font-color-ash {
+	color: #C9C9C9 !important;
+}
+
+/*****processTitle*******/
+.fastui-process-title{
+	width: 24%;
+	display: inline-block;
+	overflow: hidden;
+}
+.fastui-process-title p{
+	margin-top: 10px;
+}
+.fastui-process-title span{
+	display: block;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background: #EEEEEE;
+	text-align: center;
+	color: #333333;
+	line-height: 30px;
+	position: relative;
+}
+.fastui-process-title span:after{
+	content: '';
+	background: #ddd;
+	display: block;
+	height: 1px;
+	width: 1500%;
+	position: absolute;
+	top: 15px;
+	left: 30px;
+}
+.fastui-process-title:first-of-type{
+	margin-left: 20px;
+}
+.fastui-process-title:last-of-type span:after{
+	height: 0;
+}
+.fastui-process-title.fastui-this span{
+	background: #1E9FFF;
+	color: #FFFFFF;	
+}
+.fastui-process-title.fastui-this span:after{
+	background: #1E9FFF;
+}
+.fastui-process-data{
+	padding: 30px 20px;
+}
+.fastui-process-data ul{
+	width: 500px;
+	border: 1px solid #EEEEEE;
+	text-align: center;
+}
+.fastui-process-data ul li{
+	padding: 10px 0;
+    border-left: 1px solid #eee;
+}
+.fastui-process-data ul li:first-of-type{
+	border-left: none;
+}
+.fastui-process-data .layadmin-backlog-body p cite{
+	font-size: 24px;
+}
+
+
+/*********load************/
+.fastui-area-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.5);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+/*******upload*******/
+.layui-upload-drag .layui-icon{
+	color: #1E9FFF;
+}
+.fastui-upload-choose a{
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+}

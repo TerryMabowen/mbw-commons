@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>FastUI</title>
+		<link rel="stylesheet" href="../static/layui/css/layui.css" />
+		<link rel="stylesheet" href="../static/css/admin.css" />
+		<link rel="stylesheet" href="../static/css/fastui.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/white.css"/>
+	</head>
+
+	<body>
+		<div class="fastui-detail-bg fastui-back-padding">
+			<div class="fastui-fixed-header">
+				<header class="fastui-header">
+					<div class="fastui-logo">
+						<img src="../static/images/logo.png" />
+						<span>系统名称</span>
+					</div>
+					<div class="fastui-logo fastui-logo-white">
+						<img src="../static/images/logo2.png" />
+						<span>系统名称</span>
+					</div>
+					<ul class="layui-nav fastui-menubar">
+						<li class="layui-nav-item layui-this">
+							<a href="index.html">首页</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="single.html">单页面</a>
+						</li>
+						<!--<li class="layui-nav-item"><span></span></li>-->
+						<li class="layui-nav-item">
+							<a href="window.html">多窗口</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="singleWindow.html">多窗口1</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="../src/views/index.html">多窗口2</a>
+						</li>
+					</ul>
+					<ul class="layui-nav fastui-usercenter" lay-filter="user_operation">
+						<li class="layui-nav-item fastui-product">
+							<a href="singlehtml/appNav.html" target="_blank"><i class="layui-icon">&#xe653;</i>我的应用</a>
+						</li>
+						<li class="layui-nav-item fastui-product">
+							<a href="javascript:void(0);"><i class="layui-icon">&#xe66f;</i>龙斌</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="#">个人设置</a>
+								</dd>
+								<dd>
+									<a href="login.html">退出系统</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</header>
+			</div>
+			<div class="fastui-single-content">
+				<div class="layui-row layui-col-space20">
+					<div class="layui-col-xs9">
+						<div class="layui-card">
+							<div class="layui-card-body fastui-card-header">
+								<form class="layui-form fastui-form">
+									<div class="layui-form-label" style="width: 52px;">日期选择:</div>
+									<div class="layui-input-inline">
+										<input class="layui-input" type="text" name="" placeholder="请选择日期" id="fastui-date5" value="" />
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="layui-card">
+							<div class="layui-card-header">费用统计</div>
+							<div class="layui-card-body">
+								<div class="layui-row fastui-money-stat fastui-tab-con">
+									<div class="layui-col-xs4">
+										<p>应付款</p><strong style="color: #5582E9;">823757.00<cite>万</cite></strong><span>134条付款计划</span>
+									</div>
+									<div class="layui-col-xs4">
+										<p>已付款</p><strong style="color: #ff9865;">7356.00<cite>万</cite></strong><span>14条付款计划</span>
+									</div>
+									<div class="layui-col-xs4">
+										<p>待付款</p><strong style="color: #78a0fc;">83568.00<cite>万</cite></strong><span>34条付款计划</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="layui-card">
+							<div class="layui-card-header">已付款费用统计</div>
+							<div class="layui-card-body">
+								<div class="layui-row">
+									<div class="layui-col-xs5 layui-col-xs-offset1">
+										<div class="layui-row fastui-already-money fastui-tab-con">
+											<div class="layui-col-xs4">
+												<p>房租费</p><strong>37448.90<cite>万</cite></strong><span>134条付款计划</span>
+											</div>
+											<div class="layui-col-xs4">
+												<p>物管费</p><strong>653.84<cite>万</cite></strong><span>134条付款计划</span>
+											</div>
+											<div class="layui-row">
+												<div class="layui-col-xs4">
+													<p>中介费</p><strong>3983.08<cite>万</cite></strong><span>134条付款计划</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>暖气费</p><strong>3874.83<cite>万</cite></strong><span>134条付款计划</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>押金</p><strong style="color: #ffb165;">6543.98<cite>万</cite></strong><span>134条付款计划</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="layui-col-xs5">
+										<div id="fastui-money-echart" style="width: 100%;height: 245px;margin-bottom: 16px;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-card">
+							<div class="layui-card-header">已付款房屋用途费用统计</div>
+							<div class="layui-card-body">
+								<div class="fastui-content-style" style="padding-top: 0;padding-bottom: 60px;">
+									<table class="layui-table" id="fastui-money-table" lay-filter="fastui-money-table"></table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="layui-col-xs3">
+						<div class="layui-card">
+							<div class="layui-card-header">本月数据<i class="layui-icon"></i></div>
+							<div class="layui-card-body">
+								<div class="layui-row">
+									<div class="layui-col-xs10 layui-col-xs-offset1">
+										<div class="layui-col-xs6">
+											<dl class="fastui-task-num">
+												<dt>0.00<span>万</span></dt>
+												<dd>应付款金额</dd>
+											</dl>
+										</div>
+										<div class="layui-col-xs6">
+											<dl class="fastui-task-num">
+												<dt>0<span>条</span></dt>
+												<dd>应付款计划</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="layui-card-body">
+								<div class="layui-row">
+									<div class="layui-col-xs10 layui-col-xs-offset1">
+										<div class="layui-col-xs6">
+											<dl class="fastui-task-num">
+												<dt>0.00<span>万</span></dt>
+												<dd>已付款金额</dd>
+											</dl>
+										</div>
+										<div class="layui-col-xs6">
+											<dl class="fastui-task-num">
+												<dt>0<span>条</span></dt>
+												<dd>已付款计划</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="layui-card-body">
+								<div class="layui-row">
+									<div class="layui-col-xs10 layui-col-xs-offset1">
+										<div class="layui-col-xs6">
+											<dl class="fastui-task-num">
+												<dt>0.00<span>万</span></dt>
+												<dd>待付款金额</dd>
+											</dl>
+										</div>
+										<div class="layui-col-xs6">
+											<dl class="fastui-task-num">
+												<dt>0<span>条</span></dt>
+												<dd>待付款计划</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="layui-card">
+							<div class="layui-card-header">下月数据<i class="layui-icon"></i></div>
+							<div class="layui-card-body">
+								<div class="layui-row">
+									<div class="layui-col-xs10 layui-col-xs-offset1">
+										<div class="layui-col-xs6">
+											<dl class="fastui-task-num">
+												<dt style="color: #7ccc9a;">2236.00<span>万</span></dt>
+												<dd>应付款金额</dd>
+											</dl>
+										</div>
+										<div class="layui-col-xs6">
+											<dl class="fastui-task-num">
+												<dt style="color: #7ccc9a;">223<span>条</span></dt>
+												<dd>应付款计划</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-card">
+							<div class="layui-card-header">版本信息</div>
+							<div class="layui-card-body">
+								<table class="layui-table" lay-size="sm">
+					              <colgroup>
+					                <col width="100">
+					                <col>
+					              </colgroup>
+					              <tbody>
+					                <tr>
+					                  <td>当前版本</td>
+					                  <td>
+					                    v1.0.0-beta
+					                  </td>
+					                </tr>
+					                <tr>
+					                  <td>发布日期</td>
+					                  <td>
+					                    2018-11-20
+					                  </td>
+					                </tr>
+					                <tr>
+					                  <td>技术支持</td>
+					                  <td>
+					                    xxx xxx
+					                  </td>
+					                </tr>
+					              </tbody>
+					            </table>
+							</div>
+						</div>
+					</div>
+					<div class="layui-row">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../static/layui/layui.js"></script>
+	<script type="text/javascript">
+		layui.config({
+			base: '../static/layui/ext/' //静态资源所在路径
+		}).extend({
+			index: '../../../static/js/index', //主入口模块
+			echarts: '../../js/mod/echarts.min',
+			publicfound:'../../../static/layui/ext/publicfound'
+		}).use(['jquery', 'laydate', 'echarts','element','table','publicfound','index'], function($) {
+			var laydate = layui.laydate,
+			element=layui.element,
+			table=layui.table;
+			
+			window.name="index";
+			
+			laydate.render({
+				elem: '#fastui-date5',
+				theme: 'date-color'
+			});
+			var index=0;
+			var myChart = echarts.init(document.getElementById('fastui-money-echart'));
+			var option = {
+				legend: {
+					orient: 'vertical',
+					x: 'right',
+					y:'center',
+					itemGap:30,
+					data: ['房租费', '物管费', '暖气费', '中介费', '押金']
+				},
+				color: ['#5582e9', '#67E0E3','#78a0fc','#9FE6B8', '#ffb165'  ],
+				series: [{
+					type: 'pie',
+					radius: ['50%', '85%'],
+					avoidLabelOverlap: false,
+					label: {
+						normal: {
+							show: false,
+							position: 'center'
+						},
+						emphasis: {
+							formatter:'{b} \n {d}%',
+							show: true,
+							textStyle: {
+								fontSize: '18',
+								fontWeight: 'bold',
+							}
+						}
+					},
+					labelLine: {
+						normal: {
+							show: false
+						}
+					},
+					data: [{
+							value: 374489000,
+							name: '房租费'
+						},
+						{
+							value: 6538400,
+							name: '物管费'
+						},
+						{
+							value: 39830800,
+							name: '暖气费'
+						},
+						{
+							value: 38748300,
+							name: '中介费'
+						},
+						{
+							value: 65439800,
+							name: '押金'
+						}
+					]
+				}]
+			};
+			myChart.setOption(option);
+			myChart.dispatchAction({type: 'highlight',seriesIndex: 0,dataIndex: 0});//设置默认选中高亮部分
+			myChart.on('mouseover',function(e){
+				if(e.dataIndex != index){
+					myChart.dispatchAction({type: 'downplay', seriesIndex: 0, dataIndex: index  });  
+				} 
+			});
+			myChart.on('mouseout',function(e){    
+				index = e.dataIndex; 
+				myChart.dispatchAction({type: 'highlight',seriesIndex: 0,dataIndex: e.dataIndex});    
+			});
+			setTimeout(function (){
+			    window.onresize = function () {
+			        myChart.resize();
+			    	myChart.dispatchAction({type: 'highlight',seriesIndex: 0,dataIndex: 0});
+			    }
+			},2000)
+			//表格
+			table.render({
+				elem:'#fastui-money-table'
+				,size:'sm'
+		    	,cellMinWidth: 80
+    			,totalRow: true
+		    	,cols: [[
+		      		{field:'type', title: '费用类型',width:260, totalRowText: '合计：'}
+		      		,{field:'total', title: '总计', totalRow: true}
+		      		,{field:'store', title: '门店', totalRow: true}
+		      		,{field:'dormitory', title: '宿舍', totalRow: true}
+		      		,{field:'office', title: '办公', totalRow: true}
+		      		,{field:'warehouse', title: '仓库', totalRow: true}
+		    	]]
+		    	,data:[
+		    		{'type':'房租费','total':'4120000.00','store':'250000.00','dormitory':'100500.00','office':'122600.00','warehouse':''},
+		    		{'type':'物管费','total':'415200.00','store':'200500.00','dormitory':'100500.00','office':'122700.00','warehouse':''},
+		    		{'type':'中介费','total':'4125500.00','store':'200500.00','dormitory':'105000.00','office':'122800.00','warehouse':''},
+		    		{'type':'暖气费','total':'4125500.00','store':'204000.00','dormitory':'100400.00','office':'1228600.00','warehouse':''},
+		    		{'type':'押金','total':'415200.00','store':'200600.00','dormitory':'104000.00','office':'122600.00','warehouse':''}
+		    	]
+			})
+		})
+	</script>
+
+</html>

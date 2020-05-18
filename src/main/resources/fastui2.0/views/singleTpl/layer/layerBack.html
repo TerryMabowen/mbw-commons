@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" href="../../../static/layui/css/layui.css" media="all"> 
+		
+		<link rel="stylesheet" href="../../../static/style/admin.css" media="all">
+		<link rel="stylesheet" href="../../../static/style/fastui.css" media="all">
+	</head>
+	<body>
+		<div class="layui-fluid">
+			<div class="layui-card">
+				<div class="layui-card-header fastui-card-header">
+					<script type="text/html" template>
+						<span>{{localStorage.getItem("title")}}</span>
+					</script>
+				</div>
+				<div class="layui-card-body">
+					<div class="layui-inline">
+						<input type="text" class="layui-input" id="getDepartment" onkeydown="getNextFocus()">
+					</div>
+					<div class="layui-inline">
+						<input type="text" class="layui-input" id="getStaff" onkeydown="getNextFocus()">
+					</div>
+					<button class="layui-btn fastui-btn department">选择部门</button>
+					<button class="layui-btn fastui-btn staff">选择人员</button>
+					<div class="selectResult">
+						<div class="layui-card">
+							<div class="layui-card-header">人员列表</div>
+							<div class="layui-card-body">
+								<button class="layui-btn fastui-btn fastui-btn-sky staff">添加人员</button>
+								<div class="layui-button-container layui-card-body"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../static/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			layui.config({
+				base: '../../../static/', //静态资源所在路径
+			}).extend({
+				index: 'lib/index' //主入口模块
+			}).use(['index', 'layerBack'])
+		</script>
+	</body>
+
+</html>

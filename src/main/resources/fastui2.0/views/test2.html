@@ -1,0 +1,324 @@
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md8">
+            <div class="layui-card">
+                <input type="hidden" name="maxSubmitTime" id="maxDate-collection" lay-key="1" value="2020-04-22">
+                <div class="layui-card-header">分管部门数据汇总</div>
+                <div class="layui-card-body">
+                    <div style="margin: 10px 0;">
+                        <div class="layui-card fastui-card">
+                            <div class="fastui-load">
+                                <div class="fastui-area-loading" style="height: 222px; display: none;"><img src="../static/layui/css/modules/layer/default/loading-0.gif"></div>
+                            </div>
+                            <div class="layui-card-header fastui-card-header">
+                                <span>现金流利润</span>
+                            </div>
+                            <div class="layui-card-body layui-row">
+                                <div class="layui-col-xs3">
+                                    <div class="fastui-number-content" style="height: 154px;">
+                                        <div class="fastui-number-title">A:现金流利润 =D+E-F-G</div>
+                                        <div class="fastui-number-price fastui-font-color-warn" id="cashProfit">-2,376,614.71</div>
+                                    </div>
+                                </div>
+                                <div class="layui-col-xs9">
+                                    <div class="layui-col-xs12" style="border-bottom: 1px solid #EEEEEE;">
+                                        <div class="layui-col-xs4 detail">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">B:经营收入</div>
+                                                <div class="fastui-number-price fastui-font-color-green" id="operationalIncome">8,826,423.69</div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs4 detail">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">C:经营支出</div>
+                                                <div class="fastui-number-price fastui-font-color-blue" id="operationalExpenses">11,751,989.52</div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs4">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">D:经营利润=B-C</div>
+                                                <div class="fastui-number-price fastui-font-color-warn" id="operationalProfit">-2,925,565.83</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-col-xs12">
+                                        <div class="layui-col-xs4 detail">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">E:非经营性收入</div>
+                                                <div class="fastui-number-price fastui-font-color-green" id="nonOperationalIncome">0.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs4 detail">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">F:投资支出</div>
+                                                <div class="fastui-number-price fastui-font-color-blue" id="investmentExpenses">0.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs4 detail">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">G:非经营性支出</div>
+                                                <div class="fastui-number-price fastui-font-color-blue" id="nonOperationalExpenses">-548,951.12</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-card fastui-card">
+                            <div class="fastui-load">
+                                <div class="fastui-area-loading" style="height: 222px; display: none;"><img src="../static/layui/css/modules/layer/default/loading-0.gif"></div>
+                            </div>
+                            <div class="layui-card-header fastui-card-header">
+                                <span>成本绩效利润</span>
+                            </div>
+                            <div class="layui-card-body layui-row">
+                                <div class="layui-col-xs3">
+                                    <div class="fastui-number-content" style="height: 154px;">
+                                        <div class="fastui-number-title">H:实际绩效利润 =L+M</div>
+                                        <div class="fastui-number-price fastui-font-color-warn" id="cpiActualProfit">-17,142,117.21</div>
+                                    </div>
+                                </div>
+                                <div class="layui-col-xs9">
+                                    <div class="layui-col-xs12" style="border-bottom: 1px solid #EEEEEE;">
+                                        <div class="layui-col-xs4">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">I:绩效成本 =C-J+K</div>
+                                                <div class="fastui-number-price fastui-font-color-warn" id="cpiExpenses">21,640,450.75</div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs4 detail">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">J:绩效支出扣减项</div>
+                                                <div class="fastui-number-price fastui-font-color-blue" id="cpiExpensesSubtract">2,896,633.06</div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs4 detail">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">K:绩效支出增加项</div>
+                                                <div class="fastui-number-price fastui-font-color-blue" id="cpiExpensesAdd">12,785,094.29</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-col-xs12">
+                                        <div class="layui-col-xs4">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">L:绩效利润 =B-I*绩效利润比</div>
+                                                <div class="fastui-number-price fastui-font-color-warn" id="cpiProfit">-17,142,117.21</div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs4">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">M:分总部绩效成本分摊</div>
+                                                <div class="fastui-number-price fastui-font-color-warn" id="cpiShareProfit">0.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-card fastui-card">
+                            <div class="fastui-load">
+                                <div class="fastui-area-loading" style="height: 222px; display: none;"><img src="../static/layui/css/modules/layer/default/loading-0.gif"></div>
+                            </div>
+                            <div class="layui-card-header fastui-card-header">
+                                <span>确认收入核算利润</span>
+                            </div>
+                            <div class="layui-card-body layui-row">
+                                <div class="layui-col-xs3">
+                                    <div class="fastui-number-content" style="height: 254px;">
+                                        <div class="fastui-number-title">P:实际核算利润 =Y+Z</div>
+                                        <div class="fastui-number-price fastui-font-color-warn" id="ledgerActualProfit">-16,615,327.85</div>
+                                    </div>
+                                </div>
+                                <div class="layui-col-xs9">
+                                    <div class="layui-col-xs12" style="border-bottom: 1px solid #EEEEEE;">
+                                        <div class="layui-col-xs3 detail">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">Q:确认收入</div>
+                                                <div class="fastui-number-price fastui-font-color-green" id="ensureIncome">0.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs3 detail">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">R:利息收入</div>
+                                                <div class="fastui-number-price fastui-font-color-green" id="interestIncome">6,843.69</div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs3">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">S:核算成本=C-T+U+V+W+X</div>
+                                                <div class="fastui-number-price fastui-font-color-warn" id="ledgerExpense">16,622,171.54</div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs3 detail">
+                                            <div class="fastui-number-content" style="border: none;">
+                                                <div class="fastui-number-title">T:核算成本扣减项</div>
+                                                <div class="fastui-number-price fastui-font-color-blue" id="ledgerExpensesSubtract">10,656,891.76</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-col-xs12">
+                                        <div class="layui-col-xs3 detail">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">U:核算成本增加项</div>
+                                                <div class="fastui-number-price fastui-font-color-blue" id="ledgerExpensesAdd">12,785,094.29</div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs3">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">V:公司管理费</div>
+                                                <div class="fastui-number-price fastui-font-color-warn" id="managerCost">2,030,077.45</div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs3 detail">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">W:计提成本</div>
+                                                <div class="fastui-number-price fastui-font-color-blue" id="accrualExpenses">0.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs3 detail">
+                                            <div class="fastui-number-content" style="border: none;">
+                                                <div class="fastui-number-title">X:投资成本摊销</div>
+                                                <div class="fastui-number-price fastui-font-color-blue" id="shareInvestmentExpenses">711,902.04</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-col-xs12">
+                                        <div class="layui-col-xs3">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">Y:核算利润=Q+R-S</div>
+                                                <div class="fastui-number-price fastui-font-color-warn" id="ledgerProfit">-16,615,327.85</div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs3">
+                                            <div class="fastui-number-content">
+                                                <div class="fastui-number-title">Z:分总部核算分摊成本</div>
+                                                <div class="fastui-number-price fastui-font-color-warn" id="ledgerShareProfit">0.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 右侧采单 -->
+        <div class="layui-col-md4">
+            <div class="layui-card">
+                <div class="layui-card-body layui-row">
+                    <div class="fastui-personal-data">
+                        <img src="../../static/image/photo.png">
+                        <p>周鹏霄</p>
+                        <p>15827348251</p>
+                        <div>
+                            <label class="layui-form-label">所在部门:</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" value="京贝IT部" readonly="readonly" class="layui-input fastui-frameless-input">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="layui-form-label">当前登录角色:</label>
+                            <div class="layui-input-inline">
+
+                                <input type="text" name="title" value="超级管理员" readonly="readonly" class="layui-input fastui-frameless-input">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="layui-form-label">已授权角色数:</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" value="1个" readonly="readonly" class="layui-input fastui-frameless-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">快捷方式</div>
+                <div class="layui-card-body">
+                    <div class="layui-carousel layadmin-carousel layadmin-shortcut">
+                        <div>
+                            <ul class="layui-row layui-col-space10">
+                                <li class="layui-col-xs3">
+                                    <a lay-href="/accountset/accountData">
+                                        <i class="layui-icon layui-icon-list"></i>
+                                        <cite>查看原始数据</cite>
+                                    </a>
+                                </li>
+                                <!-- <li class="layui-col-xs3">
+                                   <a lay-href="home/homepage1.html">
+                                      <i class="layui-icon layui-icon-console"></i>
+                                      <cite>查看账户日记账</cite>
+                                   </a>
+                                </li> -->
+                                <li class="layui-col-xs3">
+                                    <a lay-href="/accountlog/index">
+                                        <i class="layui-icon layui-icon-list"></i>
+                                        <cite>查看账户更新日志</cite>
+                                    </a>
+                                </li>
+                                <li class="layui-col-xs3">
+                                    <a lay-href="/accountinit/index">
+                                        <i class="layui-icon layui-icon-list"></i>
+                                        <cite>查看账户期初</cite>
+                                    </a>
+                                </li>
+                                <li class="layui-col-xs3">
+                                    <a lay-href="/accountTotal/account_total_coa_stat.html">
+                                        <i class="layui-icon layui-icon-list"></i>
+                                        <cite>查看管理简报</cite>
+                                    </a>
+                                </li>
+                                <li class="layui-col-xs3">
+                                    <a lay-href="/accountTotal/index">
+                                        <i class="layui-icon layui-icon-list"></i>
+                                        <cite>查看管报明细</cite>
+                                    </a>
+                                </li>
+                                <!-- <li class="layui-col-xs3">
+                                   <a lay-href="home/homepage1.html">
+                                      <i class="layui-icon layui-icon-console"></i>
+                                      <cite>查看分公司汇总</cite>
+                                   </a>
+                                </li>
+                                <li class="layui-col-xs3">
+                                   <a lay-href="home/homepage1.html">
+                                      <i class="layui-icon layui-icon-console"></i>
+                                      <cite>查看事业部汇总</cite>
+                                   </a>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">计算规则</div>
+                <div class="layui-card-body layui-text layadmin-text">
+                    <p>1.现金流利润 = 经营性利润 + 非经营性收入-投资支出-非经营性支出</p>
+                    <p>2.经营利润 = 经营收入-经营支出</p>
+                    <p>3.绩效成本 = 经营支出-绩效支出扣减项+绩效成本增加项</p>
+                    <p>4.绩效利润 = 经营收入-绩效成本*绩效利润比例</p>
+                    <p>5.分总部分摊利润= (（分总部）绩效利润 + （分公司）经营性收入*比例系数4 ) * 比例系数5 </p>
+                    <p>6.实际绩效利润=绩效利润 + 分总部分摊利润</p>
+                    <p>7.核算成本 = 经营支出-核算成本扣减项+核算承恩增加项</p>
+                    <p>8.核算利润=确认收入 + 利息收入 - 核算成本</p>
+                    <p>9.分总部分摊核算利润= （（分总部）核算利润 + （分公司）确认收入 * 比例系数4）* 比例系数5 </p>
+                    <p>10.实际核算利润=核算利润 + 分总部分摊核算利润</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 部门账户概览 -->
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-xs12 ">
+            <div class="layui-card">
+                <div class="layui-card-header">分管部门账户概览</div>
+                <div class="layui-card-body fastui-content-style">
+                    <table class="layui-hide" id="account-list" lay-filter="account-list"></table><div class="layui-form layui-border-box layui-table-view" lay-filter="LAY-table-1" lay-id="account-list" style=" "><div class="layui-table-box"><div class="layui-table-header"><table cellspacing="0" cellpadding="0" border="0" class="layui-table" lay-size="sm" lay-even=""><thead><tr><th data-field="0" data-key="1-0-0" data-minwidth="50" data-unresize="true" class=" layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers"><span>序号</span></div></th><th data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1"><span>校区编号</span></div></th><th data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2"><span>校区名称</span></div></th><th data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3"><span>总收入</span></div></th><th data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4"><span>总支出</span></div></th><th data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5"><span>存款基数</span></div></th><th data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6"><span>存款利息</span></div></th><th data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7"><span>贷款基数</span></div></th><th data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8"><span>贷款利息</span></div></th><th data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9"><span>储备金余额</span></div></th><th data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10"><span>余额</span></div></th></tr></thead></table></div><div class="layui-table-body layui-table-main"><table cellspacing="0" cellpadding="0" border="0" class="layui-table" lay-size="sm" lay-even=""><tbody><tr data-index="0" class=""><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">1</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ000</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京分总部</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">60115</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">-540688.24</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">186280.102322</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">1170.89</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">0</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">788254.232322</div></td></tr><tr data-index="1"><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">2</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ001L</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京朝阳公园</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">426334</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">264125.57</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">750954.98858</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">239.11</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">-1677.89</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">913402.52858</div></td></tr><tr data-index="2"><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">3</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ002L</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京西大望路</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">154970.69</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">222069.89</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">220586.632075</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">71.56</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">0</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">153558.992075</div></td></tr><tr data-index="3"><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">4</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ003L</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京草桥</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">188034.12</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">116561.314516</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">443231.768951</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">135.18</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">-5077</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">514839.754435</div></td></tr><tr data-index="4" class=""><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">5</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ004L</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京石景山</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">283311</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">164383.265</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">542017.067983</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">175.44</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">0</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">661120.242983</div></td></tr><tr data-index="5"><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">6</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ005L</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京崇文门</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">46961.84</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">75767.11</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">315967.275036</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">88.41</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">0</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">287250.415036</div></td></tr><tr data-index="6" class=""><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">7</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ007B</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京大成路</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">14771.61</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">106971.45</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">184873.263305</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">46.99</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">-3350</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">92720.413305</div></td></tr><tr data-index="7"><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">8</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ008L</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京南站</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">424451.15</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">123804.7</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">301258.833255</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">137.85</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">0</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">602043.133255</div></td></tr><tr data-index="8"><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">9</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ009L</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京公主坟</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">213788.69</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">168943.27</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">576466.04046</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">171.95</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">0</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">621483.41046</div></td></tr><tr data-index="9" class=""><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">10</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ010L</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京东直门</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">175783.03</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">272170.7</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">370221.899455</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">105.79</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">0</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">273940.019455</div></td></tr><tr data-index="10"><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">11</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ011L</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京金科</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">90395.3</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">65697.7</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">152186.54316</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">47.16</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">0</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">176931.30316</div></td></tr><tr data-index="11" class=""><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">12</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ012L</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京万柳</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">228364.39</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">89329.61</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">419401.932249</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">144.79</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">0</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">558581.502249</div></td></tr><tr data-index="12"><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">13</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ013L</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京润泽悦溪</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">218735.05</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">66525.79</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">276825.610559</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">105.65</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">0</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">429140.520559</div></td></tr><tr data-index="13"><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">14</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ014L</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京格瑞雅居</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">68646</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">84360.31</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">232776.451034</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">63.68</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">-4100</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">217125.821034</div></td></tr><tr data-index="14"><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">15</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ015L</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京运河湾</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">50093</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">78980.11</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">185016.032804</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">47.84</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">-1400</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">156176.762804</div></td></tr><tr data-index="15"><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">16</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ016L</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京亚运村</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">170122.4</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">73518.25</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">297922.95913</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">100.08</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">0</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">394627.18913</div></td></tr><tr data-index="16"><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">17</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ017B</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京望京SOHO</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">49850.48</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">62757.11</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">229238.648926</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">60.82</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">-3556</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">216392.838926</div></td></tr><tr data-index="17"><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">18</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ018B</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京苹果园</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">174264.5</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">188955.87</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">216486.956701</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">74.52</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">0</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">201870.106701</div></td></tr><tr data-index="18"><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">19</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ019B</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京天通苑</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">32801.1</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">194157.21</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">178544.772636</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">41.47</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">0</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">17230.132636</div></td></tr><tr data-index="19"><td data-field="0" data-key="1-0-0" data-minwidth="50" class="layui-table-col-special"><div class="layui-table-cell laytable-cell-1-0-0 laytable-cell-numbers">20</div></td><td data-field="departmentCode" data-key="1-0-1" class=""><div class="layui-table-cell laytable-cell-1-0-1">BJ020B</div></td><td data-field="departmentName" data-key="1-0-2" class=""><div class="layui-table-cell laytable-cell-1-0-2">北京方庄</div></td><td data-field="inMoney" data-key="1-0-3" class=""><div class="layui-table-cell laytable-cell-1-0-3">7265.92</div></td><td data-field="outMoney" data-key="1-0-4" class=""><div class="layui-table-cell laytable-cell-1-0-4">34127.71</div></td><td data-field="depositBalance" data-key="1-0-5" class=""><div class="layui-table-cell laytable-cell-1-0-5">179996.141304</div></td><td data-field="depositAccrual" data-key="1-0-6" class=""><div class="layui-table-cell laytable-cell-1-0-6">48.42</div></td><td data-field="loanBalance" data-key="1-0-7" class=""><div class="layui-table-cell laytable-cell-1-0-7">0</div></td><td data-field="loanAccrual" data-key="1-0-8" class=""><div class="layui-table-cell laytable-cell-1-0-8">0</div></td><td data-field="reserveBalance" data-key="1-0-9" class=""><div class="layui-table-cell laytable-cell-1-0-9">-1361.61</div></td><td data-field="balance" data-key="1-0-10" class=""><div class="layui-table-cell laytable-cell-1-0-10">153182.771304</div></td></tr></tbody></table></div></div><div class="layui-table-page"><div id="layui-table-page1"><div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-1"><a href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0"><i class="layui-icon"></i></a><span class="layui-laypage-curr"><em class="layui-laypage-em"></em><em>1</em></span><a href="javascript:;" data-page="2">2</a><a href="javascript:;" data-page="3">3</a><span class="layui-laypage-spr">…</span><a href="javascript:;" class="layui-laypage-last" title="尾页" data-page="8">8</a><a href="javascript:;" class="layui-laypage-next" data-page="2"><i class="layui-icon"></i></a><span class="layui-laypage-skip">到第<input type="text" min="1" value="1" class="layui-input">页<button type="button" class="layui-laypage-btn">确定</button></span><span class="layui-laypage-count">共 143 条</span><span class="layui-laypage-limits"><select lay-ignore=""><option value="10">10 条/页</option><option value="20" selected="">20 条/页</option><option value="30">30 条/页</option><option value="40">40 条/页</option><option value="50">50 条/页</option><option value="60">60 条/页</option><option value="70">70 条/页</option><option value="80">80 条/页</option><option value="90">90 条/页</option></select></span></div></div></div><style>.laytable-cell-1-0-0{ width: 40px; }.laytable-cell-1-0-1{  }.laytable-cell-1-0-2{  }.laytable-cell-1-0-3{  }.laytable-cell-1-0-4{  }.laytable-cell-1-0-5{  }.laytable-cell-1-0-6{  }.laytable-cell-1-0-7{  }.laytable-cell-1-0-8{  }.laytable-cell-1-0-9{  }.laytable-cell-1-0-10{  }</style></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>上传文件</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" href="../../../static/layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="../../../static/style/admin.css" media="all">
+		<link rel="stylesheet" href="../../../static/style/formSelects.css" media="all">
+		<link rel="stylesheet" href="../../../static/style/fastui.css" media="all">
+	</head>
+	<body>
+		<div class="layui-fluid">
+			<div class="layui-row layui-col-space15">
+				<div class="layui-col-md12">
+					<div class="layui-card">
+						<div class="layui-card-header fastui-card-header">
+							<script type="text/html" template>
+								<span>{{localStorage.getItem("title")}}</span>
+							</script>
+							<div class="fastui-card-header-right">
+								<a layadmin-event="iframeRefresh"><i class="layui-icon layui-icon-refresh"></i>刷新</a>
+							</div>
+						</div>
+						<div class="layui-card-body">
+							<form class="layui-form">
+								<div class="layui-form-item">
+									<label class="layui-form-label">商品主题名称:</label>
+									<div class="layui-input-inline">
+										<input type="text" value="" placeholder="请输入商品名称" class="layui-input" />
+									</div>
+									<div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
+								</div>
+								<div class="layui-form-item">
+									<label class="layui-form-label">商品主题名称:</label>
+									<div class="layui-input-inline">
+										<input type="text" value="" placeholder="请输入商品名称" class="layui-input" />
+									</div>
+									<div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
+								</div>
+								<div class="layui-form-item">
+									<label class="layui-form-label">轮播图:</label>
+									<div class="layui-upload-drag" id="test10">
+									  	<div class="fastui-upload">
+									  		<i class="layui-icon">&#xe624;</i>
+									  		<p>点击上传，或将文件拖拽到此处</p>
+									  	</div>
+									  	<div class="layui-hide fastui-upload-choose" id="uploadDemoView">
+										    <img src=""  style="max-width: 196px">
+										    <a class="fastui-upload-del" href="javascript:;">删除</a>
+									  	</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+            <script type="text/html" template>
+              <div class="fastui-version">{{ layui.admin.systemName }}<span>v{{ layui.admin.v }}</span>build:{{layui.admin.build}}</div>
+            </script>
+		</div>
+		<script src="../../../static/layui/layui.js"></script>
+		<script>
+			layui.config({
+				base: '../../../static/' //静态资源所在路径
+			}).extend({
+				index: 'lib/index' //主入口模块
+			}).use(['index','upload'], function() {
+				var $ = layui.$
+					,upload = layui.upload;
+				
+				//拖拽上传
+			  	var uploadListIns = upload.render({
+				    elem: '#test10'
+				    ,url: 'https://httpbin.org/post' //改成您自己的上传接口
+				    ,choose:function(obj){
+				    	console.log(obj);
+				    	obj.preview(function(index, file, result){
+					        $('#uploadDemoView').find('img').attr('src',result)
+					    });
+					    $('#uploadDemoView').removeClass('layui-hide');
+					    $(".fastui-upload").hide();
+					    //删除
+				        $('#uploadDemoView').find('.fastui-upload-del').on('click', function(){
+				          delete files[0]; //删除对应的文件
+				          $('#uploadDemoView').find('img').attr('src','')
+				          uploadListIns.config.elem.next()[0].value = ''; //清空 input file 值，以免删除后出现同名文件不可选
+				        })
+				    }
+				    ,done: function(res){
+				      layer.msg('上传成功');
+//				      layui.$('#uploadDemoView').removeClass('layui-hide').find('img').attr('src', obj.files.file);
+				    }
+			  	});
+			});
+		</script>
+	</body>
+
+</html>

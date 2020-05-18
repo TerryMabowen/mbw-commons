@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" />
+		<title>FastUI</title>
+		<link rel="stylesheet" href="../static/layui/css/layui.css" />
+		<link rel="stylesheet" href="../static/css/admin.css" />
+		<link rel="stylesheet" href="../static/css/fastui.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/white.css"/>
+	</head>
+
+	<body>
+		<div class="fastui-screen">
+			<div class="fastui-fixed-header">
+			<header class="fastui-header">
+				<div class="fastui-logo">
+					<img src="../static/images/logo.png"/>
+					<span>财务中台</span>
+				</div>
+				<div class="fastui-logo fastui-logo-white">
+					<img src="../static/images/logo2.png" />
+					<span>财务中台</span>
+				</div>
+				<ul class="layui-nav fastui-menubar">
+					<li class="layui-nav-item">
+						<a href="index.html">首页</a>
+					</li>
+					<li class="layui-nav-item layui-this">
+						<a href="single.html">单页面</a>
+					</li>
+					<!--<li class="layui-nav-item"><span></span></li>-->
+					<li class="layui-nav-item">
+						<a href="window.html">多窗口</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="singleWindow.html">多窗口1</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="../src/views/index.html">多窗口2</a>
+					</li>
+				</ul>
+				<ul class="layui-nav fastui-usercenter" lay-filter="user_operation">
+					<li class="layui-nav-item fastui-product fastui-left-side">
+						<a href="javascript:void(0);"><i class="layui-icon">&#xe653;</i>工作台</a>
+					</li>
+					<li class="layui-nav-item fastui-product fastui-left-side-news">
+						<a href="javascript:void(0);"><i class="layui-icon">&#xe667;</i>消息</a>
+					</li>
+					<li class="layui-nav-item fastui-product">
+						<a href="javascript:void(0);"><i class="layui-icon">&#xe66f;</i>龙斌</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="#">个人设置</a>
+							</dd>
+							<dd>
+								<a href="login.html">退出系统</a>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</header>
+			<div class="fastui-twomenu-bg">
+				<ul class="fastui-menu-wrapper">
+					<li class="fastui-this"><a href="single.html">首页</a></li>
+					<li>
+						<a href="#">表格<i class="layui-icon">&#xe625;</i></a>
+						<ul class="fastui-two-menu">
+							<li><a href="singlehtml/table.html">表格</a></li>
+							<li><a href="singlehtml/table1.html">大表格</a></li>
+							<li><a href="singlehtml/fixedtable.html">固定表格</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">表单<i class="layui-icon">&#xe625;</i></a>
+						<ul class="fastui-two-menu">
+							<li><a href="singlehtml/form.html">表单</a></li>
+							<li><a href="singlehtml/contract.html">合同</a></li>
+							<li><a href="singlehtml/form1.html">大表单</a></li>
+							<li><a href="singlehtml/form2.html">表单帮助</a></li>
+						</ul>
+					</li>
+					<li><a href="singlehtml/bill.html">付款单</a></li>
+					<li><a href="singlehtml/transfer.html">穿梭框</a></li>
+					<li>
+						<a href="#">错误页面<i class="layui-icon">&#xe625;</i></a>
+						<ul class="fastui-two-menu">
+							<li><a href="singlehtml/404.html">404</a></li>
+							<li><a href="singlehtml/500.html">500</a></li>
+							<li><a href="singlehtml/nodata.html">无权限</a></li>
+							<li><a href="singlehtml/load.html">加载中</a></li>
+							<li><a href="singlehtml/develop.html">开发中</a></li>
+						</ul>
+					</li>
+					<li><span></span></li>
+					<li><a href="singlehtml/button.html">按钮</a></li>
+					<li><a href="#">记录</a></li>
+				</ul>
+			</div>
+			</div>
+			<div class="fastui-single-content">
+				<div class="layui-row layui-col-space20">
+					<div class="layui-col-xs9">
+						<div class="layui-row layui-col-space20">
+							<div class="layui-col-xs6">
+								<div class="layui-card">
+									<div class="layui-card-header">财务数据汇总
+										<div class="layui-icon">
+											<ul class="fastui-tab-title">
+											    <li class="fastui-tab-click"><a href="#">本月</a></li>
+											    <li><a href="#">本季度</a></li>
+											    <li><a href="#">本年</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="layui-card-body layui-row fastui-card-body">
+										<div class="fastui-tab">
+											<div class="fastui-tab-con">
+												<div class="layui-col-xs4">
+													<p>预收款</p><strong style="color: #5582E9;">45000<cite>元</cite></strong><span>134条订单</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>确认收款</p><strong style="color: #ff9865;">450000<cite>元</cite></strong><span>14条订单</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>费用支出</p><strong style="color: #78a0fc;">45000<cite>元</cite></strong><span>34条订单</span>
+												</div>
+											</div>
+											<div class="fastui-tab-con">
+												<div class="layui-col-xs4">
+													<p>预收款</p><strong style="color: #5582E9;">10000<cite>元</cite></strong><span>134条订单</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>确认收款</p><strong style="color: #ff9865;">2000<cite>元</cite></strong><span>14条订单</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>费用支出</p><strong style="color: #78a0fc;">400<cite>元</cite></strong><span>34条订单</span>
+												</div>
+											</div>
+											<div class="fastui-tab-con">
+												<div class="layui-col-xs4">
+													<p>预收款</p><strong style="color: #5582E9;">328393<cite>元</cite></strong><span>134条订单</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>确认收款</p><strong style="color: #ff9865;">2987477<cite>元</cite></strong><span>14条订单</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>费用支出</p><strong style="color: #78a0fc;">234324<cite>元</cite></strong><span>34条订单</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="layui-col-xs6">
+								<div class="layui-card">
+									<div class="layui-card-header">财务数据汇总
+										<div class="layui-icon">
+											<ul class="fastui-tab-title">
+											    <li class="fastui-tab-click"><a href="#">本月</a></li>
+											    <li><a href="#">本季度</a></li>
+											    <li><a href="#">本年</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="layui-card-body layui-row fastui-card-body">
+										<div class="fastui-tab">
+											<div class="fastui-tab-con">
+												<div class="layui-col-xs4">
+													<p>预收款</p><strong style="color: #5582E9;">45000<cite>元</cite></strong><span>134条订单</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>确认收款</p><strong style="color: #ff9865;">450000<cite>元</cite></strong><span>14条订单</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>费用支出</p><strong style="color: #78a0fc;">45000<cite>元</cite></strong><span>34条订单</span>
+												</div>
+											</div>
+											<div class="fastui-tab-con">
+												<div class="layui-col-xs4">
+													<p>预收款</p><strong style="color: #5582E9;">10000<cite>元</cite></strong><span>134条订单</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>确认收款</p><strong style="color: #ff9865;">2000<cite>元</cite></strong><span>14条订单</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>费用支出</p><strong style="color: #78a0fc;">400<cite>元</cite></strong><span>34条订单</span>
+												</div>
+											</div>
+											<div class="fastui-tab-con">
+												<div class="layui-col-xs4">
+													<p>预收款</p><strong style="color: #5582E9;">328393<cite>元</cite></strong><span>134条订单</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>确认收款</p><strong style="color: #ff9865;">2987477<cite>元</cite></strong><span>14条订单</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>费用支出</p><strong style="color: #78a0fc;">234324<cite>元</cite></strong><span>34条订单</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="layui-row layui-col-space20">
+							<div class="layui-col-xs12">
+								<div class="layui-card">
+									<div class="layui-card-header">财务数据汇总
+										<div class="layui-icon">
+											<ul class="fastui-tab-title">
+											    <li class="fastui-tab-click"><a href="#">本月</a></li>
+											    <li><a href="#">本季度</a></li>
+											    <li><a href="#">本年</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="layui-card-body layui-row fastui-card-body">
+										<div class="fastui-tab">
+											<div class="fastui-tab-con">
+												<div class="layui-col-xs4">
+													<p>预收款</p><strong style="color: #5582E9;">45000<cite>元</cite></strong><span>134条订单</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>确认收款</p><strong style="color: #ff9865;">450000<cite>元</cite></strong><span>14条订单</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>费用支出</p><strong style="color: #78a0fc;">45000<cite>元</cite></strong><span>34条订单</span>
+												</div>
+											</div>
+											<div class="fastui-tab-con">
+												<div class="layui-col-xs4">
+													<p>预收款</p><strong style="color: #5582E9;">10000<cite>元</cite></strong><span>134条订单</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>确认收款</p><strong style="color: #ff9865;">2000<cite>元</cite></strong><span>14条订单</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>费用支出</p><strong style="color: #78a0fc;">400<cite>元</cite></strong><span>34条订单</span>
+												</div>
+											</div>
+											<div class="fastui-tab-con">
+												<div class="layui-col-xs4">
+													<p>预收款</p><strong style="color: #5582E9;">328393<cite>元</cite></strong><span>134条订单</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>确认收款</p><strong style="color: #ff9865;">2987477<cite>元</cite></strong><span>14条订单</span>
+												</div>
+												<div class="layui-col-xs4">
+													<p>费用支出</p><strong style="color: #78a0fc;">234324<cite>元</cite></strong><span>34条订单</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="layui-col-xs3">
+						<div class="layui-card">
+							<div class="layui-card-header">排行</div>
+							<div class="layui-card-body layui-row fastui-card-body">
+								<ul class="fastui-tab-title layui-row">
+									<li class="fastui-tab-click"><a href="#">预收款</a></li>
+									<li><a href="#">确认收款</a></li>
+									<li><a href="#">支出费用</a></li>
+								</ul>
+								<div class="fastui-tab">
+									<ul class="fastui-tab-con">
+										<li><a href="#">1.某某某分部</a></li>
+										<li><a href="#">2.某某某分部</a></li>
+										<li><a href="#">3.某某某分部</a></li>
+									</ul>
+									<ul class="fastui-tab-con">
+										<li><a href="#">2.某某某分部</a></li>
+									</ul>
+									<ul class="fastui-tab-con">
+										<li><a href="#">3.某某某分部</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="layui-card">
+							<div class="layui-card-header">预收款</div>
+							<div class="layui-card-body layui-row fastui-card-body">
+								要设最小高度吗？
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="layui-row layui-col-space20">
+					<div class="layui-col-xs4">
+						<div class="layui-card">
+							<div class="layui-card-header">预收款<i class="layui-icon"></i></div>
+							<div class="layui-card-body layui-row fastui-card-body">
+								要设最小高度吗？
+							</div>
+						</div>
+					</div>
+					<div class="layui-col-xs8">
+						<div class="layui-card">
+							<div class="layui-card-header">预收款</div>
+							<div class="layui-card-body layui-row fastui-card-body">
+								要设最小高度吗？
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="layui-row layui-col-space20">
+					<div class="layui-col-xs4">
+						<div class="layui-card">
+							<div class="layui-card-header">预收款<i class="layui-icon"></i></div>
+							<div class="layui-card-body layui-row fastui-card-body">
+								要设最小高度吗？
+							</div>
+						</div>
+					</div>
+					<div class="layui-col-xs8">
+						<div class="layui-card">
+							<div class="layui-card-header">预收款</div>
+							<div class="layui-card-body layui-row fastui-card-body">
+								要设最小高度吗？
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fastui-side-html"></div>
+			<div class="fastui-side-news-html"></div>
+		</div>
+	</body>
+	<script src="../static/layui/layui.js"></script>
+	<script type="text/javascript">
+		layui.config({
+			base: '../static/layui/ext/' //静态资源所在路径
+		}).extend({
+			index: '../../../static/js/index' //主入口模块
+		}).use('index');
+		layui.use(['jquery','publicfound'], function($) {
+			$(".fastui-side-html").load("singlehtml/rightside_work.html");
+			$(".fastui-side-news-html").load("singlehtml/rightside_news.html");
+			//tab
+			$(".fastui-tab").find(".fastui-tab-con:eq(0)").show();
+			$(".fastui-tab-title li").click(function(){
+				var i=$(this).index();
+				$(this).parents(".layui-card").find(".fastui-tab-con").eq(i).show().siblings().hide();
+				$(this).addClass('fastui-tab-click').siblings().removeClass('fastui-tab-click')
+			})
+			$(".fastui-tab-rank .fastui-tabcon-rank:eq(0)").show()
+			$(".fastui-tabtitle-rank li").click(function(){
+				var i=$(this).index();
+				$(".fastui-tab-rank").find(".fastui-tabcon-rank").eq(i).show().siblings().hide();
+				$(this).addClass('fastui-tab-click').siblings().removeClass('fastui-tab-click')
+			});
+			
+		});
+	</script>
+
+</html>

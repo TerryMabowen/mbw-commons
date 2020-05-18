@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="shortcut icon" href="../static/image/favicon.ico" />
+		<link rel="stylesheet" href="../static/layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="../static/style/admin.css" media="all">
+		<link rel="stylesheet" type="text/css" href="../static/style/fastui.css" />
+	</head>
+	<body class="layui-layout-body">
+		<div id="LAY_app">
+			<div class="layui-layout layui-layout-admin">
+				<div class="layui-header fastui-header">
+					<!-- 头部区域 -->
+					<ul class="layui-nav layui-layout-left" lay-filter="fastui-nav">
+						<li class="layui-nav-item layui-hide-xs fastui-logo">
+							<img class="" src="../static/image/logo.png" />
+							<span><strong>中台</strong><strong>系统</strong></span>
+						</li>
+						<li class="layui-nav-item" lay-unselect>
+							<a title="">
+								<cite>表单</cite>
+							</a>
+							<ul class="fastui-nav-child layui-nav-child">
+								<fieldset class="layui-elem-field layui-field-title">
+									<legend>导航分类</legend>
+								</fieldset>
+								<div>
+									<li><a lay-href="singleTpl/form/element.html">表单</a></li>
+									<li><a lay-href="singleTpl/form/group.html">表单组</a></li>
+									<li><a lay-href="singleTpl/form/frameless.html">无边框</a></li>
+								</div>
+							</ul>
+						</li>
+						<li class="layui-nav-item" lay-unselect>
+							<a title="">
+								<cite>表格</cite>
+							</a>
+							<ul class="fastui-nav-child layui-nav-child">
+								<fieldset class="layui-elem-field layui-field-title">
+									<legend>导航分类</legend>
+								</fieldset>
+								<div>
+									<li><a lay-href="singleTpl/table/toolbar.html">开启头部工具条</a></li>
+									<li><a lay-href="singleTpl/table/totalRow.html">合计行</a></li>
+									<li><a lay-href="singleTpl/table/checkbox.html">复选框</a></li>
+								</div>
+								<fieldset class="layui-elem-field layui-field-title">
+									<legend>导航分类</legend>
+								</fieldset>
+								<div>
+									<li><a lay-href="singleTpl/table/radio.html">数据表格</a></li>
+									<li><a lay-href="singleTpl/table/treeTable.html">树形表格</a></li>
+									<li><a lay-href="singleTpl/table/newlineTable.html">换行表格</a></li>
+								</div>
+								<fieldset class="layui-elem-field layui-field-title">
+									<legend>导航分类</legend>
+								</fieldset>
+								<div>
+									<li><a lay-href="singleTpl/table/person.html">个人资料</a></li>
+									<li><a lay-href="singleTpl/table/stateTable.html">动态列</a></li>
+								</div>
+							</ul>
+						</li>
+						<li class="layui-nav-item" lay-unselect>
+							<a title="">
+								<cite>穿梭框</cite>
+							</a>
+							<ul class="fastui-nav-child layui-nav-child">
+								<div>
+									<li><a lay-href="singleTpl/transfer/transfer.html">列表穿梭框</a></li>
+									<li><a lay-href="singleTpl/transfer/tableTransfer.html">表格穿梭框</a></li>
+								</div>
+							</ul>
+						</li>
+						<li class="layui-nav-item" lay-unselect>
+							<a title="">
+								<cite>弹出层</cite>
+							</a>
+							<ul class="fastui-nav-child layui-nav-child">
+								<div>
+									<li><a lay-href="singleTpl/layer/list.html">弹出层操作</a></li>
+									<li><a lay-href="singleTpl/layer/layerBack.html">查找带回</a></li>
+								</div>
+							</ul>
+						</li>
+						<li class="layui-nav-item" lay-unselect>
+							<a title="">
+								<cite>错误页面</cite>
+							</a>
+							<ul class="fastui-nav-child layui-nav-child">
+								<fieldset class="layui-elem-field layui-field-title">
+									<legend>导航分类</legend>
+								</fieldset>
+								<div>
+									<li><a lay-href="erroTpl/404.html">404</a></li>
+									<li><a lay-href="erroTpl/500.html">500</a></li>
+									<li><a lay-href="erroTpl/permisssion.html">无权限</a></li>
+								</div>
+								<div>
+									<li><a lay-href="erroTpl/loading.html">加载中</a></li>
+									<li><a lay-href="erroTpl/develop.html">开发中</a></li>
+								</div>
+								<fieldset class="layui-elem-field layui-field-title">
+									<legend>导航分类</legend>
+								</fieldset>
+								<div>
+									<li><a lay-href="erroTpl/404.html">404</a></li>
+									<li><a lay-href="erroTpl/500.html">500</a></li>
+									<li><a lay-href="erroTpl/permisssion.html">无权限</a></li>
+								</div>
+								<div>
+									<li><a lay-href="erroTpl/loading.html">加载中</a></li>
+									<li><a lay-href="erroTpl/develop.html">开发中</a></li>
+								</div>
+							</ul>
+						</li>
+						<li class="layui-nav-item" lay-unselect>
+							<a title="">
+								<cite>其他</cite>
+							</a>
+							<ul class="fastui-nav-child layui-nav-child">
+								<fieldset class="layui-elem-field layui-field-title">
+									<legend>导航分类</legend>
+								</fieldset>
+								<div>
+									<li><a lay-href="singleTpl/tree/dtree.html">树形</a></li>
+									<li><a lay-href="singleTpl/list/list.html">列表</a></li>
+									<li><a lay-href="singleTpl/watermark/watermark.html">水印</a></li>
+								</div>
+								<fieldset class="layui-elem-field layui-field-title">
+									<legend>导航分类</legend>
+								</fieldset>
+								<div>
+									<li><a lay-href="singleTpl/echarts/echart.html">echarts</a></li>
+									<li><a lay-href="singleTpl/button/button.html">按钮</a></li>
+									<li><a lay-href="singleTpl/process/process.html">进程</a></li>
+								</div>
+								<fieldset class="layui-elem-field layui-field-title">
+									<legend>导航分类</legend>
+								</fieldset>
+								<div>
+									<li><a lay-href="singleTpl/upload/upload.html">上传</a></li>
+								</div>
+							</ul>
+						</li>
+					</ul>
+					<ul class="layui-nav layui-layout-right" lay-filter="layadmin-layout-right">
+						<li class="layui-nav-item" lay-unselect>
+							<a layadmin-event="myApp">
+								我的应用
+							</a>
+						</li>
+						<li class="layui-nav-item" lay-unselect style="margin-right: 20px;">
+							<a href="javascript:;">
+								<cite><img class="fastui-photo" src="../static/image/photo.png" />黎黎</cite>
+							</a>
+							<dl class="layui-nav-child fastui-nav-right-child">
+								<dd class="fastui-nav-right-photo">
+									<img src="../static/image/photo.png" />
+									<p>admin-超级管理员</p>
+									<p>登录时间:2020-03-26 11:09:56</p>
+									<p>贝尔工作:2年5个月</p>
+								</dd>
+								<dd>
+									<button class="layui-btn layui-btn-primary"><i class="layui-icon-username layui-icon"></i>个人中心</button>
+									<button class="layui-btn layui-btn-primary"><i class="layui-icon-password layui-icon"></i>修改密码</button>
+								</dd>
+								<dd class="fastui-nav-right-opt">
+									<p><i class="layui-icon-set layui-icon"></i>清除缓存</p>
+									<p><i class="layui-icon-username layui-icon"></i>在线人数</p>
+									<p><i class="layui-icon-notice layui-icon"></i>访问次数</p>
+								</dd>
+								<dd layadmin-event="logout">
+									<p><i class="layui-icon-return layui-icon" style="margin-right: 6px;"></i>退出</p>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+				<!-- 页面标签 -->
+				<div class="layadmin-pagetabs" id="LAY_app_tabs">
+					<div class="layui-icon layadmin-tabs-control layui-icon-prev" layadmin-event="leftPage"></div>
+					<div class="layui-icon layadmin-tabs-control layui-icon-next" layadmin-event="rightPage"></div>
+					<div class="layui-icon layadmin-tabs-control layui-icon-down">
+						<ul class="layui-nav layadmin-tabs-select" lay-filter="layadmin-pagetabs-nav">
+							<li class="layui-nav-item" lay-unselect>
+								<a href="javascript:;"></a>
+								<dl class="layui-nav-child layui-anim-fadein">
+									<dd layadmin-event="closeThisTabs">
+										<a href="javascript:;">关闭当前标签页</a>
+									</dd>
+									<dd layadmin-event="closeOtherTabs">
+										<a href="javascript:;">关闭其它标签页</a>
+									</dd>
+									<dd layadmin-event="closeAllTabs">
+										<a href="javascript:;">关闭全部标签页</a>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<div class="layui-tab" lay-unauto lay-allowClose="true" lay-filter="layadmin-layout-tabs">
+						<ul class="layui-tab-title" id="LAY_app_tabsheader">
+							<li lay-id="home/console.html" lay-attr="home/console.html"><i class="layui-icon layui-icon-home"></i></li>
+						</ul>
+					</div>
+				</div>
+				<!-- 主体内容 -->
+				<div class="layui-body" id="LAY_app_body">
+					<div class="layadmin-tabsbody-item layui-show">
+						<iframe src="home/console.html" frameborder="0" class="layadmin-iframe"></iframe>
+					</div>
+				</div>
+				<!-- 辅助元素，一般用于移动设备下遮罩 -->
+				<div class="layadmin-body-shade" layadmin-event="shade"></div>
+			</div>
+		</div>
+		<div class="fastui-loading">
+			<i class="layui-icon-loading layui-icon"></i>
+		</div>
+		<ul class="layui-fixbar">
+			<li style="font-size: 12px;line-height: 24px;"><i class="layui-icon layui-icon-help"></i><span style="display: block;text-align: center;">帮助</span></li>
+		</ul>
+		<script src="../static/layui/layui.js"></script>
+		<script>
+			layui.config({
+				base: '../static/', //静态资源所在路径
+				version: new Date().getTime()
+			}).extend({
+				index: 'lib/index' //主入口模块
+			}).use('index');
+		</script>
+	</body>
+
+</html>

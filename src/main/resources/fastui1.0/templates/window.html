@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>FastUI</title>
+		<link rel="stylesheet" type="text/css" href="../static/css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/admin.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/fastui.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/white.css"/>
+	</head>
+
+	<body>
+		<div class="fastui-window-screen">
+			<header class="fastui-header fastui-window-nav">
+				<div class="fastui-logo">
+					<img src="../static/images/logo.png" />
+					<span>财务中台</span>
+				</div>
+				<div class="fastui-logo fastui-logo-white">
+					<img src="../static/images/logo2.png" />
+					<span>财务中台</span>
+				</div>
+				<ul class="layui-nav fastui-menubar">
+					<li class="layui-nav-item">
+						<a href="index.html">首页</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="single.html">单页面</a>
+					</li>
+					<!--<li class="layui-nav-item"><span></span></li>-->
+					<li class="layui-nav-item layui-this">
+						<a href="window.html">多窗口</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="singleWindow.html">多窗口1</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="../src/views/index.html">多窗口2</a>
+					</li>
+				</ul>
+				<ul class="layui-nav fastui-usercenter" lay-filter="user_operation">
+					<li class="layui-nav-item fastui-product">
+						<a target="_blank" href="singlehtml/appNav.html"><i class="layui-icon">&#xe653;</i>我的应用</a>
+					</li>
+					<li class="layui-nav-item fastui-product">
+						<a href="javascript:void(0);"><i class="layui-icon">&#xe66f;</i>龙斌</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="#">个人设置</a>
+							</dd>
+							<dd>
+								<a href="login.html">退出系统</a>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</header>
+			<div class="fastui-leftside-onemenu">
+				<h2>校务</h2>
+				<ul class="fastui-one-menu">
+					<li><a href="javascript:;" class="fastui-this"><i class="layui-icon">&#xe715;</i><span>市场</span></a></li>
+					<li><a href="javascript:;"><i class="layui-icon">&#xe715;</i><span>市场</span></a></li>
+				</ul>
+			</div>
+			<div class="fastui-sidebar-all">
+				<div class="fastui-pack-up">
+					<h3><span>市场管理</span><i class="layui-icon">&#xe668;</i></h3>
+				</div>
+				<ul class="layui-nav layui-nav-tree layui-inline fastui-silder" lay-filter="fastui-nav">
+					<li class="layui-nav-item layui-nav-itemed">
+						<a href="javascript:;"><i class="layui-icon">&#xe7ae;</i><cite>默认展开</cite></a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="javascript:;" class="fastui-menuitem" data-href="data/form.html" data-target="iframe" data-id="from"><cite>表单</cite></a>
+							</dd>
+							<dd>
+								<a href="javascript:;" class="fastui-menuitem" data-href="data/table.html" data-target="tab" data-id="table"><cite>表格</cite></a>
+							</dd>
+							<dd>
+								<a href="javascript:;" class="fastui-menuitem" data-href="data/table1.html" data-target="tab" data-id="tablebar"><cite>操作表格</cite></a>
+							</dd>
+							<dd>
+								<a href="javascript:;" class="fastui-menuitem" data-href="data/table2.html" data-target="tab" data-id="tableself"><cite>固定列宽表格</cite></a>
+							</dd>
+							<dd>
+								<a href="javascript:;" class="fastui-menuitem" data-href="data/layer.html" data-target="iframe" data-id="layer"><cite>弹出层</cite></a>
+							</dd>
+							<dd>
+								<a href="javascript:;" class="fastui-menuitem" data-href="data/tree.html" data-target="iframe" data-id="tree"><cite>树形</cite></a>
+							</dd>
+						</dl>
+						<ul>
+							<li><a href="javascript:;" class="fastui-menuitem" data-href="data/form.html" data-target="iframe" data-id="from">表单</a></li>
+							<li><a href="javascript:;" class="fastui-menuitem" data-href="data/table.html" data-target="tab" data-id="table">表格</a></li>
+							<li><a href="javascript:;" class="fastui-menuitem" data-href="data/table1.html" data-target="tab" data-id="tablebar">操作表格</a></li>
+							<li><a href="javascript:;" class="fastui-menuitem" data-href="data/table2.html" data-target="tab" data-id="tableself">固定列宽表格</a></li>
+							<li><a href="javascript:;" class="fastui-menuitem" data-href="data/layer.html" data-target="iframe" data-id="layer">弹出层</a></li>
+							<li><a href="javascript:;" class="fastui-menuitem" data-href="data/tree.html" data-target="iframe" data-id="tree">树形</a></li>
+						</ul>
+					</li>
+					<li class="layui-nav-item layui-nav-itemed">
+						<a href="javascript:;"><i class="layui-icon">&#xe7ae;</i><cite>错误页面</cite></a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="javascript:;" class="fastui-menuitem" data-href="data/404.html" data-target="tab" data-id="404"><cite>404页面</cite></a>
+							</dd>
+							<dd>
+								<a href="javascript:;" class="fastui-menuitem" data-href="data/500.html" data-target="tab" data-id="500"><cite>500页面</cite></a>
+							</dd>
+							<dd>
+								<a href="javascript:;" class="fastui-menuitem" data-href="data/nodata.html" data-target="tab" data-id="nodata"><cite>无权限页面</cite></a>
+							</dd>
+							<dd>
+								<a href="javascript:;" class="fastui-menuitem" data-href="data/load.html" data-target="tab" data-id="load"><cite>加载中页面</cite></a>
+							</dd>
+							<dd>
+								<a href="javascript:;" class="fastui-menuitem" data-href="data/develop.html" data-target="tab" data-id="dep"><cite>开发中页面</cite></a>
+							</dd>
+						</dl>
+						<ul>
+							<li><a href="javascript:;" class="fastui-menuitem" data-href="data/404.html" data-target="tab" data-id="404">404页面</a></li>
+							<li><a href="javascript:;" class="fastui-menuitem" data-href="data/500.html" data-target="tab" data-id="500">500页面</a></li>
+							<li><a href="javascript:;" class="fastui-menuitem" data-href="data/nodata.html" data-target="tab" data-id="nodate">无权限页面</a></li>
+							<li><a href="javascript:;" class="fastui-menuitem" data-href="data/load.html" data-target="tab" data-id="load">加载中页面</a></li>
+							<li><a href="javascript:;" class="fastui-menuitem" data-href="data/develop.html" data-target="tab" data-id="dep">开发中页面</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="layui-nav layui-nav-tree layui-inline fastui-silder" lay-filter="fastui-nav">
+					<li class="layui-nav-item layui-nav-itemed">
+						<a href="javascript:;"><i class="layui-icon">&#xe7ae;</i><cite>默认展开</cite></a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="javascript:;" class="fastui-menuitem" data-href="data/form.html" data-target="tab" data-id="from"><cite>表单</cite></a>
+							</dd>
+							<dd>
+								<a href="javascript:;" class="fastui-menuitem" data-href="data/table.html" data-target="tab" data-id="table"><cite>表格</cite></a>
+							</dd>
+							<dd>
+								<a href="javascript:;" class="fastui-menuitem" data-href="data/table1.html" data-target="tab" data-id="tablebar"><cite>操作表格</cite></a>
+							</dd>
+							<dd>
+								<a href="javascript:;" class="fastui-menuitem" data-href="data/table2.html" data-target="tab" data-id="tableself"><cite>固定列宽表格</cite></a>
+							</dd>
+							<dd>
+								<a href="javascript:;" class="fastui-menuitem" data-href="data/layer.html" data-target="iframe" data-id="layer"><cite>弹出层</cite></a>
+							</dd>
+							<dd>
+								<a href="javascript:;" class="fastui-menuitem" data-href="data/tree.html" data-target="iframe" data-id="tree"><cite>树形</cite></a>
+							</dd>
+						</dl>
+						<ul>
+							<li><a href="javascript:;" class="fastui-menuitem" data-href="data/form.html" data-target="tab" data-id="from">表单</a></li>
+							<li><a href="javascript:;" class="fastui-menuitem" data-href="data/table.html" data-target="tab" data-id="table">表格</a></li>
+							<li><a href="javascript:;" class="fastui-menuitem" data-href="data/table1.html" data-target="tab" data-id="tablebar">操作表格</a></li>
+							<li><a href="javascript:;" class="fastui-menuitem" data-href="data/table2.html" data-target="tab" data-id="tableself">固定列宽表格</a></li>
+							<li><a href="javascript:;" class="fastui-menuitem" data-href="data/layer.html" data-target="iframe" data-id="layer">弹出层</a></li>
+							<li><a href="javascript:;" class="fastui-menuitem" data-href="data/tree.html" data-target="iframe" data-id="tree">树形</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div id="container" class="layui-tab layui-tab-brief fastui-maincontent" lay-filter="fastui-maincontent" lay-allowClose="true">
+				<ul class="layui-tab-title">
+					<li class="layui-this" lay-allowClose="false" lay-id="dashboard">快速引导</li>
+				</ul>
+				<div class="layui-tab-content">
+					<div class="layui-tab-item layui-show">
+						首页
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../static/layui/layui.js"></script>
+
+	<script type="text/javascript">
+		layui.config({
+			base: '../static/layui/ext/' //静态资源所在路径
+		}).extend({
+			index: '../../../static/js/index' //主入口模块
+		}).use('index')
+		layui.use(['jquery','layer'],function($){
+			window.name="window";
+			$('.fastui-silder:gt(0)').hide()
+			$('.fastui-leftside-onemenu .fastui-one-menu li').click(function(){
+				var i=$(this).index();
+				$('.fastui-sidebar-all .fastui-silder').eq(i).show().siblings('.fastui-silder').hide();
+				$(this).find('a').addClass('fastui-this').parent().siblings().find('a').removeClass('fastui-this');
+			})
+		});
+	</script>
+
+</html>

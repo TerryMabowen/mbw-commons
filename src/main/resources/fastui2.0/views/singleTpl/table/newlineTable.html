@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表格</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" href="../../../static/layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="../../../static/style/admin.css" media="all">
+		<link rel="stylesheet" href="../../../static/style/formSelects.css" media="all">
+		<link rel="stylesheet" href="../../../static/style/fastui.css" media="all">
+	</head>
+	<body>
+		<div class="layui-fluid">
+			<div class="layui-row layui-col-space15">
+				<div class="layui-col-md12">
+					<div class="layui-card">
+						<div class="layui-card-header fastui-card-header">
+							<script type="text/html" template>
+								<span>{{localStorage.getItem("title")}}</span>
+							</script>
+							<div class="fastui-card-header-right">
+								<a layadmin-event="iframeRefresh"><i class="layui-icon layui-icon-refresh"></i>刷新</a>
+							</div>
+						</div>
+						<div class="layui-card-body">
+							<div class="fastui-toolbar-con">
+								<form class="layui-form fastui-form-seacher layui-row">
+									<fieldset class="layui-elem-field layui-field-title fastui-field-color">
+										<legend>基本查询条件</legend>
+									</fieldset>
+									<div class="layui-col-space20">
+										<div class="layui-col-xs3">
+											<div class="layui-input-inline">
+												<select name="select-resulte" xm-select="select1" xm-select-skin="default">
+													<option value="">请选择(多选)</option>
+													<option value="0">北京校区</option>
+													<option value="1">成都校区</option>
+													<option value="2">深圳校区</option>
+												</select>
+											</div>
+										</div>
+										<div class="layui-col-xs3">
+											<div class="layui-input-inline">
+												<select name="type" lay-search="">
+													<option value="">请选择(多选)</option>
+													<option value="0">地推</option>
+													<option value="1">转介绍</option>
+													<option value="2">网络</option>
+												</select>
+											</div>
+										</div>
+										<div class="layui-col-xs3">
+											<div class="layui-input-inline">
+												<select name="city" xm-select="select3" xm-select-skin="default">
+											        <option value="">请选择(多选)</option>
+											        <option value="1">北京</option>
+											        <option value="2">上海</option>
+											        <option value="3">广州</option>
+											        <option value="4">深圳</option>
+											        <option value="5">天津</option>
+											        <option value="6">杭州</option>
+											    </select>
+											</div>
+										</div>
+										
+										<div class="layui-col-xs3">
+											<div class="layui-input-inline">
+												<input type="text" name="data" autocomplete="off" placeholder="日期" class="layui-input">
+											</div>
+										</div>
+									</div>
+									<div class="layui-col-space20">
+										<div class="layui-col-xs3">
+											<div class="layui-input-inline">
+												<input type="text" name="data" autocomplete="off" placeholder="日期" class="layui-input">
+											</div>
+										</div>
+										<div class="layui-col-xs3">
+											<div class="layui-input-inline">
+												<input type="text" name="data" autocomplete="off" placeholder="日期" class="layui-input">
+											</div>
+										</div>
+										<div class="layui-col-xs3">
+											<div class="layui-input-inline">
+												<button type="button" class="layui-btn fastui-btn fastui-btn-sky"><i class="layui-icon">&#xe615;</i>查询</button>
+												<button class="layui-btn layui-btn-primary" type="reset">重置</button>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="layui-row fastui-seacher-tabbar">
+								<div class="fastui-seacher-tabbar-tatol fastui-this">
+									<span>546</span>
+									<p>查询结果</p>
+								</div>
+								<div class="fastui-seacher-tabbar-right">
+									<div class="fastui-seacher-tabbar-flex">
+										<div class="fastui-seacher-bg">
+											<div class="fastui-seacher-type-title">
+												<div>按品牌分</div>
+											</div>
+											<div>
+												<a href="javascript:;">
+													<span>546</span>
+													<p>查询结果</p>
+												</a>
+											</div>
+											<div>
+												<a href="javascript:;">
+													<span>546</span>
+													<p>查询结果</p>
+												</a>
+											</div>
+											<div id="jjj">
+												<a href="javascript:;">
+													<span>546</span>
+													<p>查询结果</p>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="fastui-table-newline">
+								<table class="layui-hide" id="test-table-newline" lay-filter="test-table-newline"></table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <script type="text/html" template>
+              <div class="fastui-version">{{ layui.admin.systemName }}<span>v{{ layui.admin.v }}</span>build:{{layui.admin.build}}</div>
+            </script>
+		</div>
+		<script src="../../../static/layui/layui.js"></script>
+		<script>
+			layui.config({
+				base: '../../../static/' //静态资源所在路径
+			}).extend({
+				index: 'lib/index' //主入口模块
+			}).use(['index','tablex','formSelects'], function() {
+				var $=layui.$
+					,tablex = layui.tablex;
+				tablex.render({
+					elem: '#test-table-newline'
+					,url: layui.setter.base + 'json/table/user.js'
+					,size:'sm'
+					,cols: [
+						[{
+							type: 'checkbox',
+							fixed:'left'
+						}, {
+							field: 'id',
+							width: 80,
+							title: 'ID',
+							sort: true,
+							fixed:'left'
+						}, {
+							field: 'username',
+							width: 80,
+							title: '用户名<br/>用户名'
+						}, {
+							field: 'sex',
+							width: 80,
+							title: '性别',
+							sort: true
+						}, {
+							field: 'city',
+							width: 80,
+							title: '城市'
+						}, {
+							field: 'sign',
+							title: '签名',
+							minWidth: 100
+						}, {
+							field: 'experience',
+							width: 80,
+							title: '积分',
+							sort: true
+						}, {
+							field: 'score',
+							width: 80,
+							title: '评分',
+							sort: true
+						}, {
+							field: 'classify',
+							width: 500,
+							title: '职业'
+						}, {
+							field: 'wealth',
+							width: 135,
+							title: '财富',
+							sort: true
+						}]
+					]
+					,page: true
+				});
+
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,54 @@
+.fastui-tuan-productList{
+	background: #FFFFFF;
+	box-shadow: 0px 0px 15px -2px #EEEEEE;
+	padding: 20px 0;
+	/*margin-top: 28px;*/
+}
+.fastui-tuan-productList .fastui-field-color{
+	margin: 0 10px 10px;
+	
+}
+.fastui-tuan-ulList ul li{
+	padding-left: 50px;
+	font-size: 14px;
+	color: #666;
+	line-height: 34px;	
+	margin: 5px 14px;
+	
+}
+.fastui-tuan-ulList ul li a{
+	color: #666;
+	
+}
+.fastui-tuan-ulList ul li:hover{
+	background: #e8f9ff;
+	border-radius: 5px;
+}
+.fastui-tuan-ulList ul li:hover a{
+	color: #1E9FFF;
+	font-weight: 600;
+}
+.fastui-tuan-ulList ul li.fastui-this{
+	background: #e8f9ff;
+	border-radius: 5px;
+}
+.fastui-tuan-ulList ul li.fastui-this a{
+	color: #1E9FFF;
+	font-weight: 600;
+}
+.fastui-tuan-title{
+	color: #333333;
+	font-size: 14px;
+	font-weight: 600;
+	padding-bottom: 5px;
+	height: 30px;
+	line-height: 30px;
+}
+.fastui-tuan-title button{
+	float: right;
+}
+.fastui-tuan-layerstyle{
+	padding-top: 40px;
+	padding-left: 50px;
+	padding-right: 50px;
+}

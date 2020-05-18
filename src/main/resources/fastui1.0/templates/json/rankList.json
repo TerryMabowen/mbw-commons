@@ -1,0 +1,114 @@
+{
+  "code": 0
+  ,"msg": ""
+  ,"count": 66
+  ,"data": [{
+  	"rank":1
+    ,"branch": "江苏分公司"
+    ,"invitationNum":2637
+    ,"orderNum": 1409.29
+    ,"orderAmount": 7383
+    ,"collectionAmount": 7837.09
+    ,"effective": 7834
+    ,"unconfirmed": 832848.37
+    ,"invalid": 2783
+    ,"invalidNum": 2783
+    ,"subtotal": 37483.23
+    ,"phone": 27389
+    ,"other": 27384.00
+    ,"followSubtotal": 37384
+    ,"followUp": 33944.00
+    ,"appointment": 2744
+    ,"temporary": 374499.84
+  },{
+  	"rank":2
+    ,"branch": "江苏分公司"
+    ,"invitationNum":2637
+    ,"orderNum": 1409.29
+    ,"orderAmount": 7383
+    ,"collectionAmount": 7837.09
+    ,"effective": 7834
+    ,"unconfirmed": 832848.37
+    ,"invalid": 2783
+    ,"invalidNum": 2783
+    ,"subtotal": 37483.23
+    ,"phone": 27389
+    ,"other": 27384.00
+    ,"followSubtotal": 37384
+    ,"followUp": 33944.00
+    ,"appointment": 2744
+    ,"temporary": 374499.84
+  },{
+  	"rank":3
+    ,"branch": "江苏分公司"
+    ,"invitationNum":2637
+    ,"orderNum": 1409.29
+    ,"orderAmount": 7383
+    ,"collectionAmount": 7837.09
+    ,"effective": 7834
+    ,"unconfirmed": 832848.37
+    ,"invalid": 2783
+    ,"invalidNum": 2783
+    ,"subtotal": 37483.23
+    ,"phone": 27389
+    ,"other": 27384.00
+    ,"followSubtotal": 37384
+    ,"followUp": 33944.00
+    ,"appointment": 2744
+    ,"temporary": 374499.84
+  },{
+  	"rank":4
+    ,"branch": "江苏分公司"
+    ,"invitationNum":2637
+    ,"orderNum": 1409.29
+    ,"orderAmount": 7383
+    ,"collectionAmount": 7837.09
+    ,"effective": 7834
+    ,"unconfirmed": 832848.37
+    ,"invalid": 2783
+    ,"invalidNum": 2783
+    ,"subtotal": 37483.23
+    ,"phone": 27389
+    ,"other": 27384.00
+    ,"followSubtotal": 37384
+    ,"followUp": 33944.00
+    ,"appointment": 2744
+    ,"temporary": 374499.84
+  },{
+  	"rank":5
+    ,"branch": "江苏分公司"
+    ,"invitationNum":2637
+    ,"orderNum": 1409.29
+    ,"orderAmount": 7383
+    ,"collectionAmount": 7837.09
+    ,"effective": 7834
+    ,"unconfirmed": 832848.37
+    ,"invalid": 2783
+    ,"invalidNum": 2783
+    ,"subtotal": 37483.23
+    ,"phone": 27389
+    ,"other": 27384.00
+    ,"followSubtotal": 37384
+    ,"followUp": 33944.00
+    ,"appointment": 2744
+    ,"temporary": 374499.84
+  },{
+  	"rank":6
+    ,"branch": "江苏分公司"
+    ,"invitationNum":2637
+    ,"orderNum": 1409.29
+    ,"orderAmount": 7383
+    ,"collectionAmount": 7837.09
+    ,"effective": 7834
+    ,"unconfirmed": 832848.37
+    ,"invalid": 2783
+    ,"invalidNum": 2783
+    ,"subtotal": 37483.23
+    ,"phone": 27389
+    ,"other": 27384.00
+    ,"followSubtotal": 37384
+    ,"followUp": 33944.00
+    ,"appointment": 2744
+    ,"temporary": 374499.84
+  }]
+}  

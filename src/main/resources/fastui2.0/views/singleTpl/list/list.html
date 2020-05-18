@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" href="../../../static/layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="../../../static/style/admin.css" media="all">
+		<link rel="stylesheet" href="../../../static/style/fastui.css" media="all">
+	</head>
+	<body>
+		<div class="layui-fluid">
+			<div class="layui-card">
+				<div class="layui-card-header fastui-card-header">
+					<script type="text/html" template>
+						<span>{{localStorage.getItem("title")}}</span>
+					</script>
+				</div>
+				<div class="layui-card-body layui-row">
+					<fieldset class="layui-elem-field layui-field-title">
+						<legend>列表(点击选中)</legend>
+					</fieldset>
+					<ul class="fastui-list-style" id="fastui-list-test"></ul>
+					<fieldset class="layui-elem-field layui-field-title">
+						<legend>列表(含有表单元素)</legend>
+					</fieldset>
+					<div class="layui-col-xs12">
+						<form class="layui-form layui-col-xs12 layui-col-sm5 layui-col-md4">
+							<ul class="fastui-dtree-list" id="fastui-list-test1"></ul>
+						</form>
+					</div>
+					<fieldset class="layui-elem-field layui-field-title">
+						<legend>列表(可操作)</legend>
+					</fieldset>
+					<div class="layui-col-xs12">
+						<div class="layui-col-xs12">
+							<button class="layui-btn fastui-btn fastui-btn-sky" id="test-add">增加</button>
+							<button class="layui-btn fastui-btn fastui-btn-sky" id="test-del">删除</button>
+							<button class="layui-btn fastui-btn fastui-btn-sky" id="test-selected">获取已选中</button>
+						</div>
+						<form class="layui-form layui-col-xs12 layui-col-sm5 layui-col-md4">
+							<ul class="fastui-dtree-list" id="fastui-list-test2"></ul>
+						</form>
+					</div>		
+				</div>
+			</div>
+            <script type="text/html" template>
+              <div class="fastui-version">{{ layui.admin.systemName }}<span>v{{ layui.admin.v }}</span>build:{{layui.admin.build}}</div>
+            </script>
+		</div>
+		<script src="../../../static/layui/layui.js"></script>
+		<script type="text/javascript">
+			layui.config({
+			    base: '../../../static/' //静态资源所在路径
+			}).extend({
+			    index: 'lib/index' //主入口模块
+			}).use(['jquery','index','layer','dtreeMod','bellui'],function(){
+				var $=layui.jquery
+					,layer=layui.layer
+					,listbox = layui.bellui.listbox;
+				listbox.render({
+					elem: '#fastui-list-test',
+					data: [{
+						id: 1,
+						name: '北京分公司'
+					}, {
+						id: 2,
+						name: '上海分公司'
+					}, {
+						id: 3,
+						name: '成都分公司'
+					}, {
+						id: 4,
+						name: '深圳分公司'
+					}, {
+						id: 5,
+						name: '海南分公司'
+					}, {
+						id: 6,
+						name: '山西分公司'
+					}],
+					onChange: function(data) {
+						console.log(data);
+					}
+				});
+				listbox.render({
+					elem: '#fastui-list-test1',
+					listSwitch: true,
+					data: [{
+						id: 1,
+						name: '是否开通微信',
+						checked: true
+					}, {
+						id: 2,
+						name: '是否开通QQ',
+						checked: false
+					}, {
+						id: 3,
+						name: '是否开通通讯工具',
+						checked: true
+					}],
+					onChange: function(data) {
+						console.log(data);
+					},
+					onItemSwitch: function(data) {
+						console.log(data);
+					}
+				});
+				listbox.render({
+					elem: '#fastui-list-test2',
+					listSwitch: true,
+					data: [{
+						id: 1,
+						name: '选择列表项1',
+						checked: true
+					}, {
+						id: 2,
+						name: '选择列表项2',
+						checked: false
+					}, {
+						id: 3,
+						name: '选择列表项3',
+						checked: true
+					}, {
+						id: 4,
+						name: '选择列表项4',
+						checked: false
+					}, {
+						id: 5,
+						name: '选择列表项5',
+						checked: true
+					}],
+					onChange: function(data) {
+						console.log(data);
+					},
+					onItemSwitch: function(data) {
+						console.log(data);
+					}
+				});
+				// 增加
+				$('#test-add').click(function() {
+					listbox.append([{
+						elem:'#fastui-list-test2',
+						appendData:[
+							{
+								id: 6,
+								name: 'QQ',
+								checked: false
+							}
+						]
+						
+					}]);
+				})
+				// 删除
+				$('#test-del').click(function() {
+					listbox.remove(6);
+				})
+
+				// 获取已选中
+				$('#test-selected').click(function() {
+					var data = listbox.getSelectedData('#fastui-list-test2');
+					layer.open({
+						title:'获取已选数据'
+						,type:1
+						,btn:['确定']
+						,content:'<div style="padding:20px 30px;">'+JSON.stringify(data)+'</div>'
+						,yes:function(){
+							layer.closeAll();
+						}
+					})
+				})
+			});
+		</script>
+	</body>
+</html>
