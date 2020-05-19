@@ -4,22 +4,25 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.mbw</groupId>
-    <artifactId>commons</artifactId>
+    <artifactId>commons-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>commons</name>
-    <packaging>jar</packaging>
+    <name>commons-parent</name>
+    <packaging>pom</packaging>
     <description>Demo project for Spring Boot</description>
 
+    <modules>
+        <module>commons-lang</module>
+        <module>commons-dal</module>
+        <module>commons-util</module>
+    </modules>
+
     <properties>
-        <java.version>1.8</java.version>
-        <springboot.version>2.1.5.RELEASE</springboot.version>
-        <apache.maven.plugin.compiler.version>3.1</apache.maven.plugin.compiler.version>
-        <apache.maven.plugin.resources.version>2.6</apache.maven.plugin.resources.version>
-        <apache.maven.plugin.release.version>2.5.3</apache.maven.plugin.release.version>
+        <spring.version>5.2.0.RELEASE</spring.version>
+        <springboot.version>2.2.0.RELEASE</springboot.version>
         <mysql.connector.version>8.0.13</mysql.connector.version>
         <druid.version>1.1.21</druid.version>
         <log4j.version>2.12.1</log4j.version>
-        <slf4j.version>1.7.26</slf4j.version>
+        <slf4j.version>1.7.30</slf4j.version>
         <lombok.version>1.18.12</lombok.version>
         <dom4j.version>2.1.1</dom4j.version>
         <xpath.jaxen.version>1.1.6</xpath.jaxen.version>
@@ -53,13 +56,6 @@
         <dagger.version>2.15</dagger.version>
         <modelmapper.version>2.3.0</modelmapper.version>
         <ehcache.version>2.10.6</ehcache.version>
-        <spring.context.support.version>5.2.1.RELEASE</spring.context.support.version>
-        <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
-        <thymeleaf-extras-shiro.version>2.0.0</thymeleaf-extras-shiro.version>
-        <thymeleaf-layout-dialect.version>2.4.1</thymeleaf-layout-dialect.version>
-        <spring.security.oauth2.version>2.3.6.RELEASE</spring.security.oauth2.version>
-        <spring.security.jwt.version>1.0.10.RELEASE</spring.security.jwt.version>
-        <spring.security.oauth2.autoconfigure.version>2.1.4.RELEASE</spring.security.oauth2.autoconfigure.version>
         <jjwt.version>0.9.1</jjwt.version>
         <jwt.version>3.3.0</jwt.version>
         <fastdfs.version>1.27-RELEASE</fastdfs.version>
@@ -72,6 +68,15 @@
         <mybatis.spring.version>2.1.2</mybatis.spring.version>
         <mybatis.pageHelper.version>1.2.13</mybatis.pageHelper.version>
         <mybatis.mapper.version>2.1.5</mybatis.mapper.version>
+        <!-- Plugin Attribute -->
+        <java.version>1.8</java.version>
+        <apache.maven.plugin.compiler.version>3.1</apache.maven.plugin.compiler.version>
+        <apache.maven.plugin.resources.version>2.6</apache.maven.plugin.resources.version>
+        <apache.maven.plugin.release.version>2.5.3</apache.maven.plugin.release.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.test.skip>true</maven.test.skip>
+        <maven.javadoc.skip>true</maven.javadoc.skip>
+        <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
     </properties>
 
     <dependencies>
@@ -82,314 +87,19 @@
             <version>${lombok.version}</version>
             <optional>true</optional>
         </dependency>
-        <!--springboot starter-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-        <!--springboot test-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
             <scope>test</scope>
-        </dependency>
-        <!--dom4j-->
-        <dependency>
-            <groupId>org.dom4j</groupId>
-            <artifactId>dom4j</artifactId>
-        </dependency>
-        <!--XPath引擎依赖-->
-        <dependency>
-            <groupId>jaxen</groupId>
-            <artifactId>jaxen</artifactId>
-        </dependency>
-        <!--easypoi-->
-        <dependency>
-            <groupId>cn.afterturn</groupId>
-            <artifactId>easypoi-base</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cn.afterturn</groupId>
-            <artifactId>easypoi-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cn.afterturn</groupId>
-            <artifactId>easypoi-annotation</artifactId>
-        </dependency>
-        <!--swagger-->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-        </dependency>
-        <!--mysql数据库驱动-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <!--mybatis-->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-jdbc</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-autoconfigure</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <!--pageHelper-->
-        <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.mybatis.spring.boot</groupId>
-                    <artifactId>mybatis-spring-boot-starter</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-autoconfigure</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <!--德鲁伊连接池-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
-        </dependency>
-        <!--alibaba.fastjson-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-        </dependency>
-        <!--shiro-->
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-all</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>commons-collections</groupId>
-                    <artifactId>commons-collections</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.apache.shiro</groupId>
-                    <artifactId>shiro-quartz</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <!--redis-->
-        <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-        </dependency>
-        <!--commons-->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-text</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>commons-beanutils</groupId>
-            <artifactId>commons-beanutils</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>commons-codec</groupId>
-            <artifactId>commons-codec</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-math3</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-compress</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>commons-fileupload</groupId>
-            <artifactId>commons-fileupload</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>commons-httpclient</groupId>
-            <artifactId>commons-httpclient</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>commons-validator</groupId>
-            <artifactId>commons-validator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-email</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-exec</artifactId>
-        </dependency>
-        <!--jackson-->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-        </dependency>
-        <!--gson-->
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-        </dependency>
-        <!--apache.httpclient-->
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-        </dependency>
-        <!--quartz-->
-        <dependency>
-            <groupId>org.quartz-scheduler</groupId>
-            <artifactId>quartz</artifactId>
-        </dependency>
-        <!--baidu.validator-->
-        <dependency>
-            <groupId>com.baidu.unbiz</groupId>
-            <artifactId>fluent-validator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.baidu.unbiz</groupId>
-            <artifactId>fluent-validator-jsr303</artifactId>
-        </dependency>
-        <!--servlet-->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <!--apache.poi-->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-excelant</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml-schemas</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-scratchpad</artifactId>
-        </dependency>
-        <!--dagger-->
-        <dependency>
-            <groupId>com.google.dagger</groupId>
-            <artifactId>dagger</artifactId>
-        </dependency>
-        <!--zookeeper-->
-        <dependency>
-            <groupId>org.apache.zookeeper</groupId>
-            <artifactId>zookeeper</artifactId>
-        </dependency>
-        <!--curator-->
-        <dependency>
-            <groupId>org.apache.curator</groupId>
-            <artifactId>curator-framework</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.curator</groupId>
-            <artifactId>curator-recipes</artifactId>
-        </dependency>
-        <!--jwt依赖包-->
-        <dependency>
-            <groupId>com.auth0</groupId>
-            <artifactId>java-jwt</artifactId>
-        </dependency>
-        <!--jjwt-->
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
         </dependency>
     </dependencies>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter</artifactId>
-                <version>${springboot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <version>${springboot.version}</version>
-            </dependency>
-            <!-- Spring Boot 缓存支持启动器 -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-cache</artifactId>
-                <version>${springboot.version}</version>
-            </dependency>
-            <!--springboot 日志-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-logging</artifactId>
-                <version>${springboot.version}</version>
-            </dependency>
-            <!--springboot aop-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-aop</artifactId>
-                <version>${springboot.version}</version>
-            </dependency>
-            <!--springboot jdbc-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-jdbc</artifactId>
-                <version>${springboot.version}</version>
-            </dependency>
-            <!--springboot amqp-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-amqp</artifactId>
-                <version>${springboot.version}</version>
-            </dependency>
-            <!--springboot redis-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-redis</artifactId>
-                <version>${springboot.version}</version>
-            </dependency>
-            <!--springboot spring-data-jpa-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-jpa</artifactId>
-                <version>${springboot.version}</version>
-            </dependency>
-            <!--springboot test-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-test</artifactId>
-                <version>${springboot.version}</version>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
             <!--shiro-->
