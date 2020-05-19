@@ -116,6 +116,36 @@
             <groupId>cn.afterturn</groupId>
             <artifactId>easypoi-annotation</artifactId>
         </dependency>
+        <!--swagger-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+        </dependency>
+        <!--mybatis mapper-->
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+        </dependency>
+        <!--mysql数据库驱动-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <!--mybatis-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+        </dependency>
+        <!--pageHelper-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+        </dependency>
         <!--德鲁伊连接池-->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -380,12 +410,6 @@
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${springfox.swagger2}</version>
             </dependency>
-            <!--mybatis mapper-->
-            <dependency>
-                <groupId>tk.mybatis</groupId>
-                <artifactId>mapper-spring-boot-starter</artifactId>
-                <version>${mybatis.mapper.version}</version>
-            </dependency>
             <!--mysql数据库驱动-->
             <dependency>
                 <groupId>mysql</groupId>
@@ -393,17 +417,23 @@
                 <version>${mysql.connector.version}</version>
                 <scope>runtime</scope>
             </dependency>
+            <!--mybatis mapper-->
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${mybatis.mapper.version}</version>
+            </dependency>
             <!--mybatis-->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mybatis.version}</version>
+                <version>${mybatis.spring.version}</version>
             </dependency>
             <!--pageHelper-->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
-                <version>${pageHelper.version}</version>
+                <version>${mybatis.pageHelper.version}</version>
             </dependency>
             <!--alibaba druid连接池-->
             <dependency>
