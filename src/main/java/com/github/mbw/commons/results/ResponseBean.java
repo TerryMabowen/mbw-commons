@@ -6,73 +6,67 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import java.io.Serializable;
 
 /**
- * 后端返回前端数据响应类
+ * 接口响应接收类
+ *
  * @author Mabowen
- * @date 2019-12-20 17:24
+ * @date 2020-05-19 10:13
  */
-public class ResponseResults implements Serializable {
-    private static final long serialVersionUID = -3416308495731001893L;
-
+public class ResponseBean<T> implements Serializable {
+    private static final long serialVersionUID = -9052894692203855750L;
     /**
-     * 网络请求的状态码
+     * 网络请求的成功的状态
      */
     public static final int OK = 0;
-    public static final int SUCCESS = 200;
-    public static final int DEFAULT_ERROR = 500;
+    public static final int ERROR = 500;
     public static final int FORBIDDEN = 403;
     public static final int PARAM_ERROR = 400;
 
-    /**
-     * 属性
-     */
     private boolean success;
-    private Object data;
+    private T data;
     private String message;
     private Integer code;
 
-    public ResponseResults() {
+    public ResponseBean() {
     }
 
-    public static ResponseResults newSuccess() {
+    public static <T> ResponseBean<T> newSuccess() {
         return newSuccess("Success", null);
     }
 
-    public static ResponseResults newSuccess(String message) {
+    public static <T> ResponseBean<T> newSuccess(String message) {
         return newSuccess(message, null);
     }
 
-    public static ResponseResults newSuccess(Object data) {
+    public static <T> ResponseBean<T> newSuccess(T data) {
         return newSuccess("Success", data);
     }
 
-    public static ResponseResults newSuccess(String message, Object data) {
-        ResponseResults rd = new ResponseResults();
-        rd.setSuccess(true);
-        rd.setCode(SUCCESS);
-        rd.setMessage(message);
-        rd.setData(data);
-        return rd;
+    public static <T> ResponseBean<T> newSuccess(String message, T data) {
+        ResponseBean<T> responseBean = new ResponseBean<T>();
+        responseBean.setSuccess(true);
+        responseBean.setCode(OK);
+        responseBean.setMessage(message);
+        responseBean.setData(data);
+
+        return responseBean;
     }
 
-    public static ResponseResults newFailed() {
-        return newFailed("Failed", null);
+    public static <T> ResponseBean<T> newFailed() {
+        return newSuccess("Success", null);
     }
 
-    public static ResponseResults newFailed(String message) {
-        return newFailed(message, null);
+    public static <T> ResponseBean<T> newFailed(String message) {
+        return newSuccess(message, null);
     }
 
-    public static ResponseResults newFailed(Object data) {
-        return newFailed("Failed", data);
-    }
+    public static <T> ResponseBean<T> newFailed(String message, T data) {
+        ResponseBean<T> responseBean = new ResponseBean<T>();
+        responseBean.setSuccess(false);
+        responseBean.setCode(ERROR);
+        responseBean.setMessage(message);
+        responseBean.setData(data);
 
-    public static ResponseResults newFailed(String message, Object data) {
-        ResponseResults rd = new ResponseResults();
-        rd.setSuccess(false);
-        rd.setMessage(message);
-        rd.setData(data);
-        rd.setCode(DEFAULT_ERROR);
-        return rd;
+        return responseBean;
     }
 
     public boolean isSuccess() {
@@ -83,11 +77,11 @@ public class ResponseResults implements Serializable {
         this.success = success;
     }
 
-    public Object getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(Object data) {
+    public void setData(T data) {
         this.data = data;
     }
 
@@ -113,11 +107,11 @@ public class ResponseResults implements Serializable {
             return true;
         }
 
-        if (!(o instanceof ResponseResults)) {
+        if (!(o instanceof ResponseBean)) {
             return false;
         }
 
-        ResponseResults that = (ResponseResults) o;
+        ResponseBean<?> that = (ResponseBean<?>) o;
 
         return new EqualsBuilder()
                 .append(success, that.success)
@@ -139,7 +133,7 @@ public class ResponseResults implements Serializable {
 
     @Override
     public String toString() {
-        return "ResponseResults{" +
+        return "ResponseBean{" +
                 "success=" + success +
                 ", code=" + code +
                 ", message='" + message + '\'' +

@@ -19,19 +19,25 @@ public class PageBean<T> implements Serializable {
     private static final long serialVersionUID = -5644250102100789603L;
     // 默认从第几页开始
     private static final int DEFAULT_CURRENT_PAGE = 1;
+
     // 默认的每页展示条数
     private static final int DEFAULT_PAGE_SIZE = 20;
 
     // 当前第几页
     private Integer currentPageNum = DEFAULT_CURRENT_PAGE;
+
     // 每页展示条数
     private Integer pageSize = DEFAULT_PAGE_SIZE;
+
     // 总页数
     private long totalPage;
+
     // 总数据量
     private long totalCount;
+
     // 分页数据
     private List<T> data;
+
     // 开始数据位置
     private int startIndex;
 
@@ -45,15 +51,6 @@ public class PageBean<T> implements Serializable {
 
     // 计算总页数
     public long getPageCount() {
-        // 方式一
-//        if (totalCount == 0) {
-//            this.totalPage = 1L;
-//        } else if (this.totalCount % this.pageSize == 0) {
-//            this.totalPage = this.totalCount / this.pageSize;
-//        } else {
-//            this.totalPage = this.totalCount / this.pageSize + 1L;
-//        }
-        // 方式二
         this.totalPage = (this.totalCount + this.pageSize - 1) / this.pageSize;
         return this.totalPage;
     }

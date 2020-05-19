@@ -3,8 +3,9 @@
  * @param exports
  * @returns
  */
-layui.define(["jquery"], function (exports) {
+layui.define(["jquery", "layer"], function (exports) {
 	var $ = layui.$;
+	var layer = layui.layer;
 	
 	function getData(url, params) {
 		return  new Promise(function(resolve, reject) {
@@ -32,10 +33,12 @@ layui.define(["jquery"], function (exports) {
 	
 	function httpRequest(url, params, type) {
 		return new Promise(function(resolve, reject) {
+			layer.load(2);
 			$.ajax(url, {
 		        type: type,
 		        data: params,
 		        success: function (response) {
+		        	layer.closeAll('loading');
 		            if (response.status === 200) {
 		            	resolve(response);
 		            } else {
@@ -43,6 +46,7 @@ layui.define(["jquery"], function (exports) {
 		            }
 		        },
 		        error: function () {
+		        	layer.closeAll('loading');
 		        	reject({
 		        		success:false, 
 		        		status:500, 
@@ -52,6 +56,38 @@ layui.define(["jquery"], function (exports) {
 		    })
 		});
 	}
+
+	function postJsonData(url, params) {
+		return httpJsonPostRequest(url, params);
+	}
+
+	function httpJsonPostRequest(url, params) {
+		return new Promise(function(resolve, reject) {
+			layer.load(2);
+			$.ajax(url, {
+				type: 'post',
+				contentType: 'application/json',
+				dataType: 'json',
+				data: JSON.stringify(params),
+				success: function (response) {
+					layer.closeAll('loading');
+					if (response.status === 200) {
+						resolve(response);
+					} else {
+						reject(response);
+					}
+				},
+				error: function () {
+					layer.closeAll('loading');
+					reject({
+						success:false,
+						status:500,
+						message: "请求失败"
+					});
+				}
+			})
+		});
+	}
 	
     exports("smthit", {
     	http: {
@@ -59,6 +95,7 @@ layui.define(["jquery"], function (exports) {
     		,postData: postData
     		,deleteData: deleteData
     		,putData: putData
+			,postJsonData: postJsonData
     	} 
     });
 });
