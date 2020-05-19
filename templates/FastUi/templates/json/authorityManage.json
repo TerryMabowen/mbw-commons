@@ -1,0 +1,55 @@
+{
+	"code": 0,
+	"msg": "",
+	"count": 388,
+	"data": [{
+		"id":"1",
+		"name":"查看权限",
+		"num":"auth:read",
+		"groupName":"权限管理",
+		"type":"功能权限",
+		"status":"正常"
+	},{
+		"id":"1",
+		"name":"查看权限",
+		"num":"auth:read",
+		"groupName":"权限管理",
+		"type":"功能权限",
+		"status":"正常"
+	},{
+		"id":"1",
+		"name":"查看权限",
+		"num":"auth:read",
+		"groupName":"权限管理",
+		"type":"功能权限",
+		"status":"正常"
+	},{
+		"id":"1",
+		"name":"查看权限",
+		"num":"auth:read",
+		"groupName":"权限管理",
+		"type":"功能权限",
+		"status":"正常"
+	},{
+		"id":"1",
+		"name":"查看权限",
+		"num":"auth:read",
+		"groupName":"权限管理",
+		"type":"功能权限",
+		"status":"正常"
+	},{
+		"id":"1",
+		"name":"查看权限",
+		"num":"auth:read",
+		"groupName":"权限管理",
+		"type":"功能权限",
+		"status":"正常"
+	},{
+		"id":"1",
+		"name":"查看权限",
+		"num":"auth:read",
+		"groupName":"权限管理",
+		"type":"功能权限",
+		"status":"正常"
+	}]
+}

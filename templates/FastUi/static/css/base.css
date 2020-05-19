@@ -1,0 +1,60 @@
+/**************************reset******************************/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 12px;
+	font-family: "微软雅黑";
+	color: #000;
+	background: #fff;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+	blr: expression(this.onFocus=this.blur());
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+a:hover{
+	text-decoration: none;
+}
+
+img {
+	border: none;
+	width: 100%;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+.clearfix {
+	zoom: 1
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+input[type=button],input[type=submit],input[type=file],button{
+	cursor: pointer; 
+	outline:none;/*除边框*/
+	-webkit-appearance: none;/*消除按钮圆角*/
+	border-radius: 0;/*彻底消除按钮圆角*/
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*清除点击阴影*/
+}
+

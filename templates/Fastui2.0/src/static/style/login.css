@@ -1,0 +1,206 @@
+.fastui-login-bg {
+	background: url(../image/login/bg1.png) no-repeat right center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	height: 100%;
+	min-width: 1000px;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+}
+
+.fastui-login-position {
+	position: absolute;
+	top: 20%;
+	right: 15%;
+}
+
+.fastui-login-con {
+	background: #FFFFFF;
+	width: 358px;
+	height: 440px;
+	padding: 22px 27px;
+	position: relative;
+}
+
+.fastui-login-con .layui-input:hover,
+.layui-textarea:hover {
+	box-shadow: none;
+	border: none !important;
+}
+
+.fastui-login-form .layui-inline {
+	box-shadow: 0px 0px 18px 2px #e7f3fb;
+	border-radius: 2px;
+	margin-top: 28px;
+}
+
+.fastui-login-logo img {
+	width: 162px;
+	margin-bottom: 10px;
+}
+
+.fastui-login-logo h2 {
+	font-size: 32px;
+	color: #182c40;
+	font-weight: bold;
+}
+
+.fastui-login-input {
+	width: 100%;
+	line-height: 48px;
+	height: 48px;
+}
+.fastui-login-input:hover i {
+	color: #25384a;
+	font-size: 20px;
+}
+
+.fastui-login-input i {
+	position: absolute;
+	left: 14px;
+	line-height: 48px;
+	height: 48px;
+	color: #c8cdd7;
+	font-size: 20px;
+}
+
+.fastui-login-input input::-webkit-input-placeholder {
+	color: #c8cdd7;
+	font-size: 14px;
+}
+
+.fastui-login-input .layui-input {
+	border: none;
+	background: none;
+	width: 100%;
+	line-height: normal;
+	height: 48px;
+	vertical-align: middle;
+	font-size: 18px;
+	padding-left: 46px;
+}
+
+.fastui-login-error {
+	height: 12px;
+	line-height: 12px;
+	color: #000000;
+	margin-top: 30px;
+}
+
+.fastui-login-verif {
+	width: 112px;
+	float: right;
+	background: #81a7fc;
+	height: 48px;
+	line-height: 48px;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+.fastui-login-input .layui-input.fastui-login-write {
+	width: 58%;
+}
+
+.fastui-login-pass {
+	margin-top: 5px;
+}
+
+.fastui-login-pass a:first-of-type {
+	float: left;
+}
+
+.fastui-login-pass a:last-of-type {
+	float: right;
+}
+
+.fastui-login-pass a {
+	color: #1E9FFF;
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+}
+
+.fastui-login-sub {
+	margin: 28px 0px 18px;
+}
+
+.fastui-login-sub.layui-btn {
+	background: #5582e9;
+	font-size: 16px;
+	height: 48px;
+	line-height: 48px;
+	border-radius: 2px;
+}
+
+.fastui-login-sub.layui-btn:hover {
+	background: #5683e9;
+}
+
+.fastui-login-slog {
+	width: 190px;
+	margin: 38px auto 0px;
+	color: #999999;
+}
+
+.fastui-login-code {
+	position: absolute;
+	right: 7px;
+	top: 7px;
+}
+.fastui-login-code img:nth-child(2){
+	display: none;
+}
+
+.fastui-login-code-con {
+	text-align: center;
+	display: none;
+	margin-top: 10px;
+}
+
+.fastui-login-code-bg {
+	width: 280px;
+	height: 280px;
+	border: 1px solid #E7F3FB;
+	margin: 22px auto 0;
+	padding: 15px;
+	background: #FFFFFF;
+}
+
+@media only screen and (max-width: 1440px) {
+	.fastui-login-con {
+		width: 300px;
+	}
+	.fastui-login-input {
+		width: 300px;
+	}
+	.fastui-login-input .layui-input.fastui-login-write {
+		width: 52%;
+	}
+	.fastui-login-bg {
+		background: url(../image/login/bgmid.png) no-repeat center center;
+		background-size: 100%;
+	}
+}
+
+@media only screen and (max-width:998px) {
+	.fastui-login-bg {
+		background: url(../image/login/bg2.png) no-repeat;
+		background-size: 100%;
+	}
+	.fastui-login-con {
+		width: 420px;
+	}
+	.fastui-login-input {
+		width: 420px;
+	}
+	.fastui-login-position {
+		top: 25%;
+		left: 50%;
+		right: auto;
+		transform: translate(-50%, -50%);
+	}
+}

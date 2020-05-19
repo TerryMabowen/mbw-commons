@@ -1,0 +1,54 @@
+{
+	"code": 0,
+	"msg": "",
+	"count": 388,
+	"data": [{
+		"school":"北京朝阳公园",
+		"singularNum":"2300",
+		"singularMoney":"9283938489.00",
+		"phoneNum":"1928",
+		"phoneMoney":"17283938.00",
+		"experienceNum":"1150",
+		"experienceMoney":"827389183.00",
+		"preachNum":"1200单",
+		"preachMoney":"8002930.00",
+		"billNum":"1000单",
+		"billMoney":"13000298.00"
+	},{
+		"school":"北京朝阳公园",
+		"singularNum":"2300",
+		"singularMoney":"9283938489.00",
+		"phoneNum":"1928",
+		"phoneMoney":"17283938.00",
+		"experienceNum":"1150",
+		"experienceMoney":"827389183.00",
+		"preachNum":"1200单",
+		"preachMoney":"8002930.00",
+		"billNum":"1000单",
+		"billMoney":"13000298.00"
+	},{
+		"school":"北京朝阳公园",
+		"singularNum":"2300",
+		"singularMoney":"9283938489.00",
+		"phoneNum":"1928",
+		"phoneMoney":"17283938.00",
+		"experienceNum":"1150",
+		"experienceMoney":"827389183.00",
+		"preachNum":"1200单",
+		"preachMoney":"8002930.00",
+		"billNum":"1000单",
+		"billMoney":"13000298.00"
+	},{
+		"school":"北京朝阳公园",
+		"singularNum":"2300",
+		"singularMoney":"9283938489.00",
+		"phoneNum":"1928",
+		"phoneMoney":"17283938.00",
+		"experienceNum":"1150",
+		"experienceMoney":"827389183.00",
+		"preachNum":"1200单",
+		"preachMoney":"8002930.00",
+		"billNum":"1000单",
+		"billMoney":"13000298.00"
+	}]
+}

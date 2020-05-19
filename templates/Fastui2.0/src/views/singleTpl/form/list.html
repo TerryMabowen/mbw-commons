@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../../static/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../static/style/admin.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../../../static/style/fastui.css" />
+</head>
+<body>
+    <div class="layui-fluid">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header fastui-card-header">
+                    <span>上课记录查询</span>
+                    <div id="btnRefresh" class="fastui-card-header-right">
+                        <a><i class="layui-icon layui-icon-refresh"></i>刷新</a>
+                    </div>
+                </div>
+                <div class="layui-card-body">
+                    <div class="fastui-toolbar-con">
+                        <form class="layui-form fastui-form-seacher layui-row" lay-fifter="class-report-search-form">
+                            <fieldset class="layui-elem-field layui-field-title fastui-field-color">
+                                <legend>基本查询条件</legend>
+                            </fieldset>
+                            <div class="layui-col-space20">
+                                <div class="layui-col-xs3">
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="name" autocomplete="off" placeholder="会员姓名" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-col-xs3">
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="courseName" autocomplete="off" placeholder="课程名" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-col-xs3">
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="other" autocomplete="off" placeholder="其他" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-col-xs3">
+                                    <div class="layui-form-item">
+                                        <div class="layui-inline" style="width: 100%;margin-right: 0;">
+                                            <div class="layui-input-inline" style="width: 32%;margin-right: 2px;">
+                                                <select name="scheduleStatus" lay-filter="date-type">
+                                                    <option value="book-time" selected>上课时间</option>
+                                                    <option value="created-time">创建时间</option>
+                                                </select>
+                                            </div>
+                                            <div class="layui-input-inline" style="width: 30%;margin-right: 0;">
+                                                <input type="text" name="startTime" id="start-time" class="layui-input" placeholder="开始时间">
+                                            </div>
+                                            <div class="layui-form-mid" style="width: 6%;margin-right: 0;text-align: center;">
+                                                -
+                                            </div>
+                                            <div class="layui-input-inline" style="width: 30%;margin-right: 0;">
+                                                <input type="text" name="endTime" id="end-time" lay-verify="dateScope" class="layui-input" placeholder="结束时间">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-space20">
+                                <div class="layui-col-xs3">
+                                    <div class="layui-input-inline">
+                                        <select name="scheduleStatus">
+                                            <option value="">选择课程状态</option>
+                                            <option value="1">未约课</option>
+                                            <option value="2">已约课</option>
+                                            <option value="3">已完课</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="left">
+                                    <button type="button" class="layui-btn fastui-btn" lay-submit lay-filter="class-report-search">
+                                        <i class="layui-icon">&#xe615;</i>查询
+                                    </button>
+                                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="fastui-table-toolbar-first">
+                        <table class="layui-hide" id="main-table" lay-filter="main-table"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../../static/layui/layui.js"></script>
+    <script type="text/javascript">
+        layui.config({
+            base: '../../../static/' //静态资源所在路径
+        }).extend({
+            index: 'lib/index' //主入口模块
+        }).use(['index', 'layer', 'form', 'table', 'laydate', 'dropdown', 'smthit', 'lodash', 'utilx' ], function() {
+            var $ = layui.$,
+                layer = layui.layer,
+                form = layui.form,
+                table = layui.table,
+                laydate = layui.laydate,
+                dropdown = layui.dropdown,
+                smthit = layui.smthit,
+                _ = layui.lodash;
+
+            var queryParam = {
+                startTime: null,
+                endTime: null
+            };
+
+            function compareStrDate(d1, d2) {
+                return ((new Date(d1.replace(/-/g,"\/"))) > (new Date(d2.replace(/-/g,"\/"))));
+            }
+
+            // 查询参数条件的初始化
+            function initQueryParam(params) {
+                // 获取当前时间
+                let nowDate = new Date();
+                params.endTime = nowDate.format('yyyy-MM-dd');
+                // 获取前一个月的时间
+                nowDate = new Date();
+                nowDate.setMonth(nowDate.getMonth() - 1);
+                params.startTime = nowDate.format('yyyy-MM-dd')
+            }
+
+            // 初始化条件查询/搜索板块
+            function initSearchPanel(params) {
+                // 刷新
+                $("#btnRefresh").click(function() {
+                    location.reload();
+                });
+
+                //开始日期
+                let startLaydate = laydate.render({
+                    elem: '#start-time',
+                    type: 'date',
+                    value: params.startTime,
+                    format: 'yyyy-MM-dd HH:mm:ss',
+                    theme: 'date-color',
+                    done: function(value, date) {
+                        //更新结束日期的最小日期
+                        endLaydate.config.min = lay.extend({}, date, {
+                            month: date.month - 1
+                        });
+                    }
+                });
+                //结束日期
+                let endLaydate = laydate.render({
+                    elem: '#end-time',
+                    type: 'date',
+                    value: params.endTime,
+                    format: 'yyyy-MM-dd HH:mm:ss',
+                    theme: 'date-color',
+                    done: function(value, date) {
+                        //更新开始日期的最大日期
+                        startLaydate.config.max = lay.extend({}, date, {
+                            month: date.month - 1
+                        });
+                    }
+                });
+
+                // 自定义表单时间范围验证
+                form.verify({
+                    dateScope: function (value, item) {
+                        if (startLaydate.config.value !== '' && compareStrDate(startLaydate.config.value, value)) {
+                            return '结束时间不能在开始时间之前';
+                        }
+                    }
+                });
+
+                form.on('select(date-type)', function (data) {
+                    $('#start-time').val('');
+                    $('#end-time').val('');
+                    form.render();
+                });
+
+                form.on('submit(class-report-search)', function (data) {
+                    table.reload('main-table', {
+                        where: data.field
+                    })
+                });
+            }
+
+            // 初始化数据(如：数据个数的统计--查询结果的统计等)
+            function initDataPanel() {}
+
+            // 初始化table板块
+            function initMainTable(params) {
+                table.render({
+                    elem: '#main-table',
+                    url: 'listData',
+                    where: {
+                        startTime: params.startTime,
+                        endTime: params.endTime
+                    },
+                    size: 'sm',
+                    toolbar: '#left-toolbar',
+                    defaultToolbar: [],
+                    title: '学习报告总表',
+                    limit: 30,
+                    cols: [[
+                        {type : 'checkbox', fixed : 'left'},
+                        {fixed : 'left', title : '操作', toolbar : '#row-toolbar', width : 240},
+                        {field : 'name', title : '会员姓名', minWidth : 140, fixed : 'left'},
+                        {field : 'teacherName', title : '老师姓名', minWidth : 140, fixed : 'left'},
+                        {field : 'courseName', title : '课程名', minWidth : 200, fixed : 'left'},
+                        {field : 'bookTime', title : '预定开课时间', minWidth : 140, fixed : 'left'},
+                        {field : 'finishTime', title : '结束时间', minWidth : 140, fixed : 'left'},
+                        {field : 'scheduleStatusDesc', title : '课程状态', minWidth : 140, fixed : 'left', unresize : true, sort : true},
+                        {title : '小码课程链接', fixed : 'left', templet : function(res) {
+                                if (res.url != null) {
+                                    return '<div style="line-height:15px;"><a href="' + res.url + '" style="font-weight:600; color: #1E9FFF;">' + res.url + '</a></div>'
+                                } else {
+                                    return '';
+                                }
+                            }
+                        }
+                    ]],
+                    done : function(obj) {
+                        $(".layui-table-tool .layui-inline[lay-event='LAYTABLE_COLS']")
+                            .css('border-right', '1px solid #d1d1d1')
+                            .html("<i class='layui-icon layui-icon-cols'></i>显示列");
+
+                        // 表格下拉菜单初始化
+                        dropdown("#main-table", obj.data, function(data) {
+                            // 拼接数组(几个数组代表几个按钮)
+                            var options = [ {
+                                title : "<b>查看会员详情</b>", // 按钮显示内容
+                                event: function () {
+                                }
+                            },{
+                                title : "<b>编辑会员信息</b>",
+                                event : function() {
+                                }
+                            }
+                            ];
+                            return options;
+                        });
+                    },
+                    page : true
+                });
+
+                //头工具栏事件
+                table.on('toolbar(left-toolbar)', function(obj) {
+                    var checkStatus = table.checkStatus(obj.config.id);
+                    switch(obj.event) {
+                        case 'getCheckData':
+                            var data = checkStatus.data;
+                            layer.alert(JSON.stringify(data));
+                            break;
+                        case 'getCheckLength':
+                            var data = checkStatus.data;
+                            layer.msg('选中了：' + data.length + ' 个');
+                            break;
+                        case 'isAll':
+                            layer.msg(checkStatus.isAll ? '全选' : '未全选');
+                            break;
+                    }
+                });
+
+                //监听行工具事件
+                table.on('tool(main-table)', function(obj) {
+                    var data = obj.data;
+                    if(obj.event === 'syncAccount') {
+                        layer.confirm('同步会员信息到小码平台?', {shade : 0}, function(index) {
+                            layer.close(index);
+                            smthit.http.postData("/xiaoma/sync/syncSingleStudent", {
+                                memberId: data.id
+                            }).then(function(result) {
+                                layer.closeAll();
+                                layer.msg(result.message);
+                            }).catch(function(result) {
+                                layer.msg(result.message);
+                            });
+                        });
+                    } else if(obj.event === 'resetPassword') {
+                        layer.prompt({
+                            shade: 0,
+                            formType: 2,
+                            value: data.email
+                        }, function(value, index) {
+                            obj.update({
+                                email: value
+                            });
+                            layer.close(index);
+                        });
+                    } else if (obj.event === 'notarizeSubtractCourse') {
+                        layer.confirm('确认给' + data.name + '扣课吗', {
+                            btn: ['确认', '取消']
+                        }, function (index) {
+                            smthit.http.postData("/xiaoma/teach/class_report/deductedCourse", {
+                                studyScheduleId: data.studyScheduleId
+                            }).then(function(result) {
+                                layer.closeAll();
+                                table.reload('main-table');
+                                layer.msg(result.message);
+                            }).catch(function(result) {
+                                layer.msg(result.message);
+                            });
+                        }, function (index) {
+                            layer.close(index);
+                        })
+                    }
+                });
+            }
+
+            initQueryParam(queryParam);
+            initSearchPanel(queryParam);
+            initMainTable(queryParam);
+
+        });
+    </script>
+</body>
+</html>

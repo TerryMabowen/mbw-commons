@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>FastUI</title>
+		<link rel="stylesheet" type="text/css" href="../static/css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/admin.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/fastui.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/white.css"/>
+	</head>
+
+	<body>
+		<div class="fastui-window-screen">
+			<div class="fastui-fixed-header">
+				<header class="fastui-header">
+					<div class="fastui-logo">
+						<img src="../static/images/logo.png" />
+						<span>财务中台</span>
+					</div>
+					<div class="fastui-logo fastui-logo-white">
+						<img src="../static/images/logo2.png" />
+						<span>财务中台</span>
+					</div>
+					<ul class="layui-nav fastui-menubar fastui-meun-nav">
+						<li class="layui-nav-item">
+							<a href="index.html">首页</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="single.html">单页面</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="window.html">多窗口</a>
+						</li>
+						<li class="layui-nav-item layui-this">
+							<a href="singleWindow.html">多窗口1</a>
+							<dl class="layui-nav-child">
+								<p>
+									<fieldset class="layui-elem-field layui-field-title fastui-font-color-sky" style="margin: 0;">
+										<legend>基础信息</legend>
+									</fieldset>
+								</p>
+								<dd>
+									<a href="javascript:;" class="fastui-menuitem" data-href="data/form.html" data-target="iframe" data-id="from"><cite>表单</cite></a>
+								</dd>
+								<dd>
+									<a href="javascript:;" class="fastui-menuitem" data-href="data/table1.html" data-target="tab" data-id="tablebar"><cite>操作表格</cite></a>
+								</dd>
+								<dd>
+									<a href="javascript:;" class="fastui-menuitem" data-href="data/table2.html" data-target="tab" data-id="tableself"><cite>固定列宽表格</cite></a>
+								</dd>
+								<p>
+									<fieldset class="layui-elem-field layui-field-title fastui-font-color-sky" style="margin: 0;">
+										<legend>基础信息</legend>
+									</fieldset>
+								</p>
+								<dd>
+									<a href="javascript:;" class="fastui-menuitem" data-href="data/404.html" data-target="tab" data-id="404"><cite>404页面</cite></a>
+								</dd>
+								<dd>
+									<a href="javascript:;" class="fastui-menuitem" data-href="data/500.html" data-target="tab" data-id="500"><cite>500页面</cite></a>
+								</dd>
+								<dd>
+									<a href="javascript:;" class="fastui-menuitem" data-href="data/nodata.html" data-target="tab" data-id="nodata"><cite>无权限页面</cite></a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="../src/views/index.html">多窗口2</a>
+						</li>
+					</ul>
+					<ul class="layui-nav fastui-usercenter" lay-filter="user_operation">
+						<li class="layui-nav-item fastui-product">
+							<a target="_blank" href="singlehtml/appNav.html"><i class="layui-icon">&#xe653;</i>我的应用</a>
+						</li>
+						<li class="layui-nav-item fastui-product">
+							<a href="javascript:void(0);"><i class="layui-icon">&#xe66f;</i>龙斌</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="#">个人设置</a>
+								</dd>
+								<dd>
+									<a href="login.html">退出系统</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</header>
+			</div>
+			<div id="container" class="layui-tab layui-tab-brief fastui-maincontent fastui-single-maincontent" lay-filter="fastui-maincontent" lay-allowClose="true">
+				<ul class="layui-tab-title">
+					<li class="layui-this" lay-allowClose="false" lay-id="dashboard">快速引导</li>
+				</ul>
+				<div class="layui-tab-content">
+					<div class="layui-tab-item layui-show">
+						首页
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../static/layui/layui.js"></script>
+
+	<script type="text/javascript">
+		layui.config({
+			base: '../static/layui/ext/' //静态资源所在路径
+		}).extend({
+			index: '../../../static/js/index' //主入口模块
+		}).use('index')
+		layui.use(['jquery','layer'],function($){
+			window.name="newWindow";
+		});
+	</script>
+
+</html>

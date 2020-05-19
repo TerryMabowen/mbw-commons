@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" href="../../../static/layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="../../../static/style/admin.css" media="all">
+		<link rel="stylesheet" href="../../../static/style/dropdown.css" media="all">
+		<link rel="stylesheet" type="text/css" href="../../../static/layui/font/dtreeFont/dtreefont.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../static/style/dtree.css"/>
+		<link rel="stylesheet" href="../../../static/style/fastui.css" media="all">
+	</head>
+	<body>
+		<div class="layui-fluid">
+			<div class="layui-row layui-col-space15">
+				<div class="layui-col-xs8">
+					<div class="layui-col-xs5">
+						<div class="layui-card fastui-card">
+							<div class="layui-card-header fastui-card-header">角色</div>
+							<div class="layui-card-body fastui-card-body-vh">
+								<div class="layui-tab layui-tab-brief">
+									<!--tab的标题-->
+									<ul class="layui-tab-title fastui-tab-title-weight">
+										<li class="layui-this">未授权角色</li>
+										<li>已授权角色</li>
+									</ul>
+									<div class="layui-tab-content" style="margin-top: 10px;">
+										<div class="layui-tab-item layui-show">
+											<form class="layui-form fastui-form fastui-form-seacher">
+												<div class="layui-form-item layui-col-space10">
+													<div class="layui-col-xs9">
+														<div class="layui-input-inline">
+															<input type="text" class="layui-input" name="" id="" value="" />
+														</div>
+													</div>
+													<div class="layui-col-xs3">
+														<div class="layui-input-inline">
+															<button class="layui-btn fastui-btn fastui-btn-sky">搜索</button>
+														</div>
+													</div>
+												</div>
+											</form>
+											<div>
+												<ul class="fastui-list-style" id="fastui-list-role"></ul>
+											</div>
+										</div>
+									</div>
+								</div>
+		
+							</div>
+						</div>
+					</div>
+					<div class="layui-col-xs7">
+						<div class="layui-card fastui-card">
+							<div class="layui-card-header fastui-card-header">行政组织架构</div>
+							<div class="layui-card-body fastui-card-body-vh">
+								<h3 class="fastui-dtree-title">部门名称<span>授权</span></h3>
+								<div class="fastui-tree">
+									<ul id="test-dtree" class="dtree" data-id="0"></ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="layui-col-xs4">
+					<div class="layui-card fastui-card">
+						<div class="layui-card-header fastui-card-header">已授权部门</div>
+						<div class="layui-card-body layui-row fastui-card-body-vh">
+							<h3 class="fastui-dtree-title">部门名称<span>含子部门</span></h3>
+							<form class="layui-form">
+								<ul class="fastui-dtree-list"></ul>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+            <script type="text/html" template>
+              <div class="fastui-version">{{ layui.admin.systemName }}<span>v{{ layui.admin.v }}</span>build:{{layui.admin.build}}</div>
+            </script>
+		</div>
+		<script src="../../../static/layui/layui.js"></script>
+		<script type="text/javascript">
+			layui.config({
+			    base: '../../../static/' //静态资源所在路径
+			}).extend({
+			    index: 'lib/index' //主入口模块
+			}).use(['index','dtreeMod','bellui'],function(){
+				var listbox = layui.bellui.listbox;
+				listbox.render({
+					elem: '#fastui-list-role',
+					data: [{
+						id: 1,
+						name: '蕾蕾'
+					}, {
+						id: 2,
+						name: '花花'
+					}],
+					onChange: function(data) {
+						console.log(data);
+					}
+				})
+			});
+		</script>
+	</body>
+</html>

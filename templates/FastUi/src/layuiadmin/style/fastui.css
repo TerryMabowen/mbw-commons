@@ -1,0 +1,69 @@
+/*****editAdminCss****/
+.layui-layout-admin .layui-layout-left, 
+.layadmin-pagetabs, 
+.layui-layout-admin .layui-body, 
+.layui-layout-admin .layui-footer{
+	left: 0;
+}
+/*****topNav****/
+.layui-layout-admin .fastui-header.layui-header .layui-nav .layui-nav-item.fastui-logo{
+	margin-left: 0;
+}
+.fastui-logo img{
+	width: 120px;
+}
+.fastui-header .layui-layout-left .layui-nav-item > a cite{
+	font-size: 15px;
+	font-weight: 600;
+}
+.layui-layout-admin .fastui-header .layui-layout-left .layui-nav-item{
+	margin: 0 10px;
+}
+.layui-layout-admin .fastui-header .layui-layout-left .layui-nav-item > a{
+	padding: 0 10px;
+	border-bottom: 3px solid transparent;
+}
+.fastui-header .layui-layout-left li.layui-nav-item:hover > a,
+.fastui-header .layui-layout-left li.layui-nav-item.fastui-this > a{
+	border-bottom: 3px solid #1E9FFF;
+}
+.fastui-header .layui-layout-left li.layui-nav-item:hover > a cite,
+.fastui-header .layui-layout-left li.layui-nav-item.fastui-this > a cite{
+	color: #1E9FFF;
+}
+.fastui-header .layui-layout-left .layui-nav-item > a span{
+	display:none;
+}
+.fastui-nav-child.layui-nav-child{
+	padding: 5px 10px;
+}
+.layui-nav .fastui-nav-child.layui-nav-child a:hover{
+	background: none;
+}
+.fastui-nav-child li{
+	display: inline-block;
+	padding: 0 10px;
+}
+
+.layui-layout-admin .fastui-header .layui-layout-left > span{
+	display: none;
+}
+.layui-layout-admin .fastui-header.layui-header .layui-nav .fastui-nav-child.layui-nav-child li.layui-this a{
+	color: #1E9FFF;
+}
+.layui-layout-admin .fastui-header.layui-header .layui-nav .fastui-nav-child.layui-nav-child li.layui-this:after{
+	height: 0;
+}
+.layui-elem-field{
+	margin: 5px 0;
+}
+.layui-elem-field legend{
+	color: #333;
+	font-size: 14px;
+	font-weight: 500;
+}
+/******tabTop********/
+.layadmin-pagetabs .layui-tab-title li.layui-this:after,
+.layadmin-pagetabs .layui-tab-title li:after{
+	height: 0;
+}
