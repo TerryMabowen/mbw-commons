@@ -73,32 +73,36 @@ public class ResponseBean<T> implements Serializable {
         return success;
     }
 
-    public void setSuccess(boolean success) {
+    public ResponseBean<T> setSuccess(boolean success) {
         this.success = success;
+        return this;
     }
 
     public T getData() {
         return data;
     }
 
-    public void setData(T data) {
+    public ResponseBean<T> setData(T data) {
         this.data = data;
+        return this;
     }
 
     public String getMessage() {
         return message;
     }
 
-    public void setMessage(String message) {
+    public ResponseBean<T> setMessage(String message) {
         this.message = message;
+        return this;
     }
 
     public Integer getCode() {
         return code;
     }
 
-    public void setCode(Integer code) {
+    public ResponseBean<T> setCode(Integer code) {
         this.code = code;
+        return this;
     }
 
     @Override

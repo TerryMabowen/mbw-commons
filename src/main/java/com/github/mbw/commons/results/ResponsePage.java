@@ -74,40 +74,45 @@ public class ResponsePage implements Serializable {
         return success;
     }
 
-    public void setSuccess(boolean success) {
+    public ResponsePage setSuccess(boolean success) {
         this.success = success;
+        return this;
     }
 
     public Integer getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public ResponsePage setCode(int code) {
         this.code = code;
+        return this;
     }
 
     public String getMessage() {
         return message;
     }
 
-    public void setMessage(String message) {
+    public ResponsePage setMessage(String message) {
         this.message = message;
+        return this;
     }
 
     public long getCount() {
         return count;
     }
 
-    public void setCount(long count) {
+    public ResponsePage setCount(long count) {
         this.count = count;
+        return this;
     }
 
     public Object getData() {
         return data;
     }
 
-    public void setData(Object data) {
+    public ResponsePage setData(Object data) {
         this.data = data;
+        return this;
     }
 
     @Override
