@@ -20,8 +20,7 @@
     </modules>
 
     <properties>
-        <spring.version>5.2.0.RELEASE</spring.version>
-        <springboot.version>2.2.0.RELEASE</springboot.version>
+        <spring.version>5.2.5.RELEASE</spring.version>
         <mysql.connector.version>8.0.13</mysql.connector.version>
         <druid.version>1.1.21</druid.version>
         <log4j.version>2.12.1</log4j.version>
