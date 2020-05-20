@@ -75,6 +75,10 @@
         <mybatis.pageHelper.version>1.2.13</mybatis.pageHelper.version>
         <mybatis.mapper.version>2.1.5</mybatis.mapper.version>
         <hutool.version>5.3.5</hutool.version>
+        <okhttp.version>3.13.1</okhttp.version>
+        <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
+        <thymeleaf-extras-shiro.version>2.0.0</thymeleaf-extras-shiro.version>
+        <thymeleaf-layout-dialect.version>2.4.1</thymeleaf-layout-dialect.version>
         <!-- Plugin Attribute -->
         <java.version>1.8</java.version>
         <apache.maven.plugin.compiler.version>3.1</apache.maven.plugin.compiler.version>
@@ -390,6 +394,11 @@
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-scratchpad</artifactId>
                 <version>${apache.poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okhttp.version}</version>
             </dependency>
             <!--thymeleaf-->
             <dependency>
