@@ -15,6 +15,7 @@
         <module>commons-dal</module>
         <module>commons-util</module>
         <module>commons-core</module>
+        <module>commons-api</module>
         <module>commons-web</module>
         <module>commons-module</module>
     </modules>
