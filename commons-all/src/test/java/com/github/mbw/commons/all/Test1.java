@@ -1,10 +1,5 @@
 package com.github.mbw.commons.core;
 
-import cn.hutool.core.convert.Convert;
-import org.junit.Test;
-
-import java.math.BigDecimal;
-
 /**
  * TODO
  *
@@ -13,7 +8,7 @@ import java.math.BigDecimal;
  */
 public class Test1 {
 
-    @Test
+
     public void f1() {
         System.out.println("16 << 1 : " + (16 << 1));
         System.out.println("16 >> 3 : " + (16 >> 3));
@@ -23,11 +18,5 @@ public class Test1 {
         System.out.println("-16 >> 2 : " + (-16 >> 2));
         System.out.println("-16 << 2 : " + (-16 << 2));
         System.out.println("-16 >>> 2 : " + (-16 >>> 2));
-    }
-
-    @Test
-    public void f2() {
-        BigDecimal sda = Convert.toBigDecimal("cvsvds");
-        System.out.println(sda);
     }
 }

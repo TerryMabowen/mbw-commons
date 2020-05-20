@@ -19,6 +19,7 @@
         <module>commons-web</module>
         <module>commons-module</module>
         <module>commons-test</module>
+        <module>commons-all</module>
     </modules>
 
     <properties>

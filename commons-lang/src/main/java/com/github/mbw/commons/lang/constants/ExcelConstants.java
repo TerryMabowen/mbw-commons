@@ -1,5 +1,7 @@
 package com.github.mbw.commons.lang.constants;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * TODO
  *
