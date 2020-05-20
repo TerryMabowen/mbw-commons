@@ -14,7 +14,12 @@
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
-
+        <!--servlet-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
