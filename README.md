@@ -1,18 +1,10 @@
-### …or create a new repository on the command line
+### 概述
+```$xslt
+    spring/springboot项目基本库
+        ——包含常用的工具类，验证器，thymeleaf模版引擎封装，mybatis封装等。
 ```
-    echo "# mbw-commons" >> README.md
-    git init
-    git add README.md
-    git commit -m "first commit"
-    git remote add origin https://github.com/TerryMabowen/mbw-commons.git
-    git push -u origin master
+
+### 下载本项目
+```
+    git clone https://github.com/TerryMabowen/mbw-commons.git
 ```                
-### …or push an existing repository from the command line
-```
-    git remote add origin https://github.com/TerryMabowen/mbw-commons.git
-    git push -u origin master
-```
-
-### …or import code from another repository
-You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
-
