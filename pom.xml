@@ -390,12 +390,6 @@
                 <artifactId>jaxen</artifactId>
                 <version>${xpath.jaxen.version}</version>
             </dependency>
-            <!--junit-->
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-            </dependency>
             <!--easypoi-->
             <dependency>
                 <groupId>cn.afterturn</groupId>
