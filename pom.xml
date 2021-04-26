@@ -36,7 +36,7 @@
         <commons.lang3.version>3.9</commons.lang3.version>
         <commons.lang.version>2.6</commons.lang.version>
         <commons.text.version>1.8</commons.text.version>
-        <commons.io.version>2.6</commons.io.version>
+        <commons.io.version>2.7</commons.io.version>
         <commons.beanutils.version>1.9.3</commons.beanutils.version>
         <commons.codec.version>1.11</commons.codec.version>
         <commons.math3.version>3.6.1</commons.math3.version>
