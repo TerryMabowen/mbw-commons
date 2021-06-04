@@ -68,7 +68,7 @@
         <fastdfs.version>1.27-RELEASE</fastdfs.version>
         <servlet.api.version>4.0.1</servlet.api.version>
         <apache.poi.version>4.1.2</apache.poi.version>
-        <apache.httpclient.version>4.5.10</apache.httpclient.version>
+        <apache.httpclient.version>4.5.13</apache.httpclient.version>
         <easypoi.version>4.0.0</easypoi.version>
         <springfox.swagger2>2.2.2</springfox.swagger2>
         <codehaus.jackson.version>1.9.13</codehaus.jackson.version>
