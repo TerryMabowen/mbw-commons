@@ -67,7 +67,7 @@
         <jwt.version>3.3.0</jwt.version>
         <fastdfs.version>1.27-RELEASE</fastdfs.version>
         <servlet.api.version>4.0.1</servlet.api.version>
-        <apache.poi.version>4.1.2</apache.poi.version>
+        <apache.poi.version>5.2.1</apache.poi.version>
         <apache.httpclient.version>4.5.10</apache.httpclient.version>
         <easypoi.version>4.0.0</easypoi.version>
         <springfox.swagger2>2.2.2</springfox.swagger2>
